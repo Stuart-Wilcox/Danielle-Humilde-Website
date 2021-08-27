@@ -1,0 +1,25 @@
+/** 
+ * about.css
+ * 
+ * Everything here should be prefixed with "about"
+ */
+
+.about-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.about-image-section {
+    
+}
+
+.about-image-section > img {
+    border-radius: 20px;
+    height: 400px;
+}
+
+.about-intro-section {
+    flex: 1;
+    margin-left: 30px;
+}
