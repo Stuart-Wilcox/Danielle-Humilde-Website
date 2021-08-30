@@ -3,3 +3,64 @@
  * 
  * Everything here should be prefixed with "contact"
  */
+
+.contact-container {
+    margin-top: 80px;
+}
+
+.contact-text {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.contact-form-group {
+    flex: 1;
+}
+
+.contact-form-label {
+
+}
+
+.contact-form-input {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 10px;
+    margin-left: 20px;
+    line-height: 20px;
+    padding: 5px;
+}
+
+.contact-form-send-button {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form-send-button > button {
+    cursor: pointer;
+    background-color: #1494F0;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 0;
+}
+
+.contact-form-send-button > button:hover {
+    background-color: rgba(20, 148, 240, 0.5);
+}
+
+.contact-form-error {
+    margin-top: 20px;
+    text-align: center;
+    color: #f00;
+}

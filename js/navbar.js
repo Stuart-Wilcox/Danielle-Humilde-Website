@@ -4,7 +4,7 @@
  * This module regards the logic for the navbar
  */
 (function(){
-    let currentPage = document.querySelector('#work-page');
+    let currentPage = document.querySelector('#contact-page');
 
     // unhide current page
     currentPage.classList.remove('hidden');
