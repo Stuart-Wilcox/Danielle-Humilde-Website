@@ -31,39 +31,36 @@
         errorText().classList.add('hidden');
     };
 
+    const showError = () => {
+        errorText().classList.remove('hidden');
+    };
+
     sendButton().addEventListener('click', async () => {
         // disable the form
         disableForm();
 
-        // read the inputs from the page
-        const message = {
-            messageBody: messageBody().value,
-            senderName: senderName().value,
-            senderEmail: senderEmail().value,
-        };
-
-        const payload = {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(message),
-        }
-
         try {
-            const response = await fetch(url, payload);
-            if (response.status !== 200) {
-                throw new Error('Failed request');
-            }
+            // read the inputs from the page
+            const messageBodyText = messageBody().value;
+            const senderNameText = senderName().value;
+            const senderEmailText = senderEmail().value;
+    
+            const mailToLink = `mailto:d.humilde@outlook.com?subject=Hello%20Danielle&body=${messageBodyText}%0A%0A${senderNameText}%0A${senderEmailText}`;
+    
+            const anchorTag = document.createElement('a');
+            anchorTag.setAttribute('style', 'display:none;');
+            anchorTag.setAttribute('href', mailToLink);
+            document.body.appendChild(anchorTag);
+            anchorTag.click();
+            document.body.removeChild(anchorTag);
 
-            clearForm();
+            // clear form after 500ms
+            window.setTimeout(() => clearForm(), 500);
         }
         catch (error) {
-            // display error message
-            errorText().classList.remove('hidden');
+            showError();
         }
         finally {
-            // re-enable the form
             enableForm();
         }
     });

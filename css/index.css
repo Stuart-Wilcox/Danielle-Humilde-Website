@@ -8,7 +8,7 @@ div.page {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    background-color: #E5E5E5;
+    background-color: #fff;
     min-height: 100vh;
 }
 
