@@ -1,13 +1,12 @@
 import * as React from 'react'
 import {
+    Content,
     Title,
     Paragraph,
 } from '../../components'; 
 import ProjectGrid from './ProjectGrid';
 import {
     StyledHome,
-    StyledHomeShoulder,
-    StyledHomeContent,
 } from './index.style';
 
 export interface IProps {
@@ -18,9 +17,8 @@ const Home: React.FC<IProps> = (props: IProps) => {
     const {} = props;
     
     return (
-        <StyledHome>
-            <StyledHomeShoulder />
-            <StyledHomeContent>
+        <Content>
+            <StyledHome>
                 <Title style={{ fontStyle: 'italic' }}>Hi! I'm Danielle Humilde</Title>
                 <Paragraph>
                     My passion for design is to create inclusive and diverse interfaces for a wide array of user experiences.
@@ -29,9 +27,8 @@ const Home: React.FC<IProps> = (props: IProps) => {
                 </Paragraph>
 
                 <ProjectGrid />
-            </StyledHomeContent>
-            <StyledHomeShoulder />
-        </StyledHome>
+            </StyledHome>
+        </Content>
     )
 }
 
