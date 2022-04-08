@@ -19,25 +19,25 @@ const projectGridData: ProjectData[] = [
         name: 'Toronto Tube',
         location: '/work/toronto-tube',
         color: '#DECAF2',
-        image: '/images/toronto_tube.png',
+        image: '/images/toronto_tube_preview.png',
     },
     {
         name: 'Subtle-T',
         location: '/work/subtle-t',
         color: '#F97781',
-        image: '/images/subtle_t.png',
+        image: '/images/subtle_t_preview.png',
     },
     {
         name: 'Smart Mirror',
         location: '/work/smart-mirror',
         color: '#EFB877',
-        image: '/images/smart_mirror.png',
+        image: '/images/smart_mirror_preview.png',
     },
     {
         name: 'Digital Marketing',
         location: '/work/digital-marketing',
         color: '#CADFF2',
-        image: '/images/digital_marketing.png',
+        image: '/images/digital_marketing_preview.png',
     }
 ];
 
