@@ -12,8 +12,10 @@ const ROUTES = [
   '/',
   '/home',
   '/about',
+  '/contact',
   '/resume',
   '/work',
+  '/work/*',
 ];
 
 const app = express();
@@ -23,7 +25,7 @@ const router = express.Router();
 
 router.route('/')
     .get((req, res) => {
-        fs.readFile(path.join(__dirname, 'build/index.html'), 'utdf-8', (err, data) => {
+        fs.readFile(path.join(__dirname, 'build/index.html'), 'utf-8', (err, data) => {
             if (err) {
                 return res.send(err).status(500);
             }
@@ -39,6 +41,10 @@ app.use(express.static(path.join(__dirname, "build")));
 for (const route of ROUTES) {
     app.use(route, router);
 }
+
+app.use('*', (req, res) => {
+    return res.redirect('/');
+});
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
