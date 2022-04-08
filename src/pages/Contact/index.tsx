@@ -25,8 +25,8 @@ const Contact: React.FC<IProps> = (props: IProps) => {
     const [email, setEmail] = React.useState<string>('');
 
     const handleSendEmailClick = () => {
-        // TODO send email
-        console.log(`Send email`, message, name, email);
+        const emailAnchor = document.createElement('a');
+        emailAnchor.setAttribute('href', `mailto:d.humilde@outlook.com?subject=Hello%20Danielle%20${name}&body=${message}`);
     };
     
     return (

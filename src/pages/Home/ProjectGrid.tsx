@@ -74,9 +74,8 @@ const ProjectGrid: React.FC<IProps> = (props: IProps) => {
                     <StyledGridRow key={index}>
                         {
                             cardRow.map((cardData, index) => (
-                                <>
+                                <React.Fragment key={cardData.name}>
                                     <Card
-                                        key={cardData.name}
                                         name={cardData.name}
                                         location={cardData.location}
                                         color={cardData.color}
@@ -89,7 +88,7 @@ const ProjectGrid: React.FC<IProps> = (props: IProps) => {
                                         :
                                            <></>
                                     }
-                                </>
+                                </React.Fragment>
                             ))
                         }
                     </StyledGridRow>

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { downloadResume, } from '../utils';
 import {
     StyledNavbar,
     StyledNavbarGroup,
@@ -17,8 +18,7 @@ const Navbar: React.FC<IProps> = (props: IProps) => {
         event.preventDefault();
         event.nativeEvent.preventDefault();
 
-        // TODO download resume
-        console.log('Download Resume');
+        downloadResume();
     };
     
     return (

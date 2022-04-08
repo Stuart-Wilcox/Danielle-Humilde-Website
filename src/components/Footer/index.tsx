@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { downloadResume } from '../utils';
 import {
     StyledFooter,
     StyledFooterShoulder,
@@ -15,8 +16,7 @@ const Footer: React.FC<IProps> = (props: IProps) => {
     const {} = props;
 
     const handleResumeClick = () => {
-        // TODO resume download
-        console.log('Resume download');
+        downloadResume();
     };
     
     return (
