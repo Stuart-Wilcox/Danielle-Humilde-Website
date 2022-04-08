@@ -30,7 +30,7 @@ const projectGridData: ProjectData[] = [
     {
         name: 'Smart Mirror',
         location: '/work/smart-mirror',
-        color: '#F2DF9C',
+        color: '#EFB877',
         image: '/images/smart_mirror.png',
     },
     {

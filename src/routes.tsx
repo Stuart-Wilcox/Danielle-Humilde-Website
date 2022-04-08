@@ -23,6 +23,7 @@ const routes: React.FC<IProps> = (props: IProps) => {
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
       <Route path="home" element={<Home />} />
+      <Route path="work" element={<Home />} />
       <Route path="work/*" element={<Work />} />
       <Route path="*" element={<Home />} />
     </Routes>
