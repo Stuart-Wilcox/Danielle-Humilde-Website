@@ -2,27 +2,35 @@ import * as React from 'react'
 import {
     Banner,
     Content,
+    Paragraph,
+    Subtitle,
+    Title,
 } from '../../../components';
 import {
-    StyledDigitalMarketing,
+    StyledWorkSection,
+} from '../index.style';
+import {
+    StyledDigitalMarketing
 } from './index.style';
 export interface IProps {
     
 }
 
+const color = '#CADFF2';
+
 const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
-    const {} = props
+    const {} = props;
     
     return (
         <>
             <Banner
-                color={'#CADFF2'}
+                color={color}
                 title={'Digital Marketing'}
                 content={'Freelance and Contract work case studies'}
             />
             <Content>
                 <StyledDigitalMarketing>
-                    Digital Marketing
+                    
                 </StyledDigitalMarketing>
             </Content>
         </>

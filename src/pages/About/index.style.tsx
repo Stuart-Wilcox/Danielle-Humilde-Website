@@ -22,10 +22,6 @@ export const StyledAboutIntro = styled.div`
 
 `;
 
-export const StyledAboutTitle = styled(Title)`
-    font-style: italic;
-    color: #1494F0;
-`;
 
 export const StyledAboutDetails = styled.table`
 

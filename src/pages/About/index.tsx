@@ -2,6 +2,7 @@ import * as React from 'react';
 import {
     Content,
     Paragraph,
+    Title,
 } from '../../components';
 import {
     StyledAbout,
@@ -13,7 +14,6 @@ import {
     StyledAboutDetailsRow,
     StyledAboutImage,
     StyledAboutIntro,
-    StyledAboutTitle,
 } from './index.style';
 
 type AboutDetails = {
@@ -82,7 +82,12 @@ const About: React.FC<IProps> = (props: IProps) => {
                         alt={'Danielle Humilde'}
                     />
                     <StyledAboutIntro>
-                        <StyledAboutTitle>Hello! 👋</StyledAboutTitle>
+                        <Title
+                            color={'#1494F0'}
+                            italic={true}
+                        >
+                            Hello! 👋
+                        </Title>
                         <Paragraph>
                             I’m Danielle, a UX/UI Designer. I love to create and solve meaningful problems in a digital and physical ecosystem. I wish to tell stories through my designs so that the end-user goals are achieved by transforming complex problems into experiences. 
                         </Paragraph>
