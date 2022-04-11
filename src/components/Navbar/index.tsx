@@ -1,5 +1,7 @@
 import * as React from 'react'
-import { downloadResume, } from '../utils';
+import { downloadResume } from '../utils';
+import { useIsMobile } from '../../hooks';
+import MobileNavbar from './index.mobile';
 import {
     StyledNavbar,
     StyledNavbarGroup,
@@ -11,7 +13,9 @@ export interface IProps {
 }
 
 const Navbar: React.FC<IProps> = (props: IProps) => {
-    const {} = props
+    const {} = props;
+
+    const isMobile = useIsMobile();
 
     const handleResumeClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         // stop page from following url in anchor
@@ -20,6 +24,14 @@ const Navbar: React.FC<IProps> = (props: IProps) => {
 
         downloadResume();
     };
+
+    if (isMobile) {
+        return (
+            <MobileNavbar
+                resumeClicked={handleResumeClick}
+            />
+        );
+    }
     
     return (
         <StyledNavbar>

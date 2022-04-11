@@ -1,4 +1,7 @@
 import * as React from 'react';
+import { 
+    useIsMobile,
+} from '../../hooks';
 import {
     Card,
 } from '../../components';
@@ -48,7 +51,9 @@ export interface IProps {
 const ProjectGrid: React.FC<IProps> = (props: IProps) => {
     const {} = props;
 
-    const cardsPerRow = 2; // TODO change this if mobile
+    const isMobile = useIsMobile();
+
+    const cardsPerRow = isMobile ? 1 : 2;
 
     const cards: ProjectData[][] = React.useMemo(() => {
         return projectGridData.reduce((acc, curr) => {
