@@ -4,6 +4,7 @@ import {
     Paragraph,
     Title,
 } from '../../components';
+import { useIsMobile } from '../../hooks';
 import {
     StyledAbout,
     StyledAboutContent,
@@ -55,7 +56,9 @@ export interface IProps {
 const About: React.FC<IProps> = (props: IProps) => {
     const {} = props;
 
-    const aboutDetailsPerRow = 3;
+    const isMobile = useIsMobile();
+
+    const aboutDetailsPerRow = isMobile ? 1 : 3;
 
     const aboutDetailsRows: AboutDetails[][] = React.useMemo(() => {
         return aboutDetails.reduce((acc, curr) => {
@@ -72,39 +75,67 @@ const About: React.FC<IProps> = (props: IProps) => {
             return acc;
         }, [] as AboutDetails[][]);
     }, [aboutDetailsPerRow]);
+
+    const Intro = (
+        <div>
+            <Title
+                color={'#1494F0'}
+                italic={true}
+            >
+                Hello! 👋
+            </Title>
+            <Paragraph>
+                I'm Danielle, a UX/UI Designer. I love to create and solve meaningful problems in a digital and physical ecosystem. I wish to tell stories through my designs so that the end-user goals are achieved by transforming complex problems into experiences. 
+            </Paragraph>
+            <Paragraph>
+                I have a multidisciplinary background in Political Science, Digital Marketing, and Design and Research. These help me create meaningful designs that help long-term relationships between the business and target user through ideation, concept creation, and experience innovation. 
+            </Paragraph>
+        </div>
+    );
+
+    const AboutDetails = (
+        <>
+            <Paragraph>
+                What I am passionate about:
+            </Paragraph>
+            <Paragraph>
+                <ul style={isMobile ? { paddingInlineStart: 20 } : {}}>
+                    <li>Product & Tech; I am always looking for ways to expand my skills and push the limits of what technologies have to offer</li>
+                    <li>Human Centred Design (HCD) research understanding problems, the constraints of the problems and finding solutions for them in a human-centred perspective</li>
+                    <li>Sports! I grew up in a competitive family and used to compete in tennis, rowing, and golf</li>
+                </ul>
+            </Paragraph>
+        </>
+    );
     
     return (
         <Content>
             <StyledAbout>
-                <StyledAboutContent>
+                <StyledAboutContent isMobile={isMobile}>
+                    {
+                        isMobile ? Intro : <></>
+                    }
                     <StyledAboutImage
                         src={'images/about.jpg'}
                         alt={'Danielle Humilde'}
+                        show={!isMobile}
                     />
-                    <StyledAboutIntro>
-                        <Title
-                            color={'#1494F0'}
-                            italic={true}
-                        >
-                            Hello! 👋
-                        </Title>
-                        <Paragraph>
-                            I’m Danielle, a UX/UI Designer. I love to create and solve meaningful problems in a digital and physical ecosystem. I wish to tell stories through my designs so that the end-user goals are achieved by transforming complex problems into experiences. 
-                        </Paragraph>
-                        <Paragraph>
-                            I have a multidisciplinary background in Political Science, Digital Marketing, and Design and Research. These help me create meaningful designs that help long-term relationships between the business and target user through ideation, concept creation, and experience innovation. 
-                        </Paragraph>
-                        <Paragraph>
-                            What I am passionate about:
-                        </Paragraph>
-                        <Paragraph>
-                            <ul>
-                                <li>Product & Tech; I am always looking for ways to expand my skills and push the limits of what technologies have to offer</li>
-                                <li>Human Centred Design (HCD) research understanding problems, the constraints of the problems and finding solutions for them in a human-centred perspective</li>
-                                <li>Sports! I grew up in a competitive family and used to compete in tennis, rowing, and golf</li>
-                            </ul>
-
-                        </Paragraph>
+                    <StyledAboutIntro isMobile={isMobile}>
+                        { isMobile ? <></> : Intro }
+                        <StyledAboutImage
+                            style={{ maxHeight: 150, marginTop: 15 }}
+                            src={'images/about.jpg'}
+                            alt={'Danielle Humilde'}
+                            show={isMobile}
+                        />
+                        {
+                            isMobile ?
+                            <div>
+                                {AboutDetails}
+                            </div>
+                            :
+                            AboutDetails
+                        }
                     </StyledAboutIntro>
                 </StyledAboutContent>
                 <StyledAboutDetails>

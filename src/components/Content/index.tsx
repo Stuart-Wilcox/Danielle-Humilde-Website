@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useIsMobile } from "../../hooks";
 
 const StyledContent = styled.div`
     display: flex;
@@ -10,18 +11,24 @@ const StyledContentShoulder = styled.div`
     flex: 1;
 `;
 
-const StyledContentMain = styled.div`
-    flex: 6;
+const StyledContentMain = styled.div<{
+    isMobile: boolean;
+}>`
+    flex: ${props => props.isMobile ? '8' : '4'};
 `;
 
-const Content: React.FC<{}> = ({ children }) => (
-    <StyledContent>
-        <StyledContentShoulder />
-        <StyledContentMain>
-            {children}
-        </StyledContentMain>
-        <StyledContentShoulder />
-    </StyledContent>
-);
+const Content: React.FC<{}> = ({ children }) => {
+    const isMobile = useIsMobile();
+
+    return (
+        <StyledContent>
+            <StyledContentShoulder />
+            <StyledContentMain isMobile={isMobile}>
+                {children}
+            </StyledContentMain>
+            <StyledContentShoulder />
+        </StyledContent>
+    );
+};
 
 export default Content;

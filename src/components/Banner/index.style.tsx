@@ -3,7 +3,18 @@ import styled from "styled-components";
 export const StyledBanner = styled.div<{ color: string }>`
     background-color: ${props => props.color};
     text-align: center;
-    padding: 80px;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+`;
+
+export const StyledBannerShoulder = styled.div`
+    flex: 1;
+`;
+
+export const StyledBannerMain = styled.div`
+    flex: 4;
 `;
 
 export const StyledBannerTitle = styled.div`

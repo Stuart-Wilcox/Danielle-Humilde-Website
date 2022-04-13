@@ -1,11 +1,39 @@
+import * as React from 'react'
 import styled from "styled-components";
+import { useIsMobile } from '../../hooks';
 
-const Title = styled.h4<{
+const StyledSubtitle = styled.h4<{
     color?: string;
     italic?: boolean;
+    isMobile: boolean;
 }>`
     color: ${props => props.color || '#000'};
     ${props => props.italic ? 'font-style: italic;' : ''}
+    ${props => props.isMobile ? 'font-size: 12px;' : ''}
 `;
 
-export default Title;
+export interface IProps extends React.HTMLProps<HTMLDivElement> {
+    color?: string;
+    italic?: boolean;
+}
+
+const Subtitle: React.FC<IProps> = (props: IProps) => {
+    const {
+        color,
+        italic,
+    } = props;
+
+    const isMobile = useIsMobile();
+    
+    return (
+        <StyledSubtitle
+            color={color}
+            italic={italic}
+            isMobile={isMobile}
+        >
+            {props.children}
+        </StyledSubtitle>
+    )
+}
+
+export default Subtitle;

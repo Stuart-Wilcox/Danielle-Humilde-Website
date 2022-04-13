@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {
     StyledBanner,
+    StyledBannerShoulder,
+    StyledBannerMain,
     StyledBannerTitle,
     StyledBannerContent,
     StyledBannerSubContent,
@@ -24,18 +26,22 @@ const Banner: React.FC<IProps> = (props: IProps) => {
     
     return (
         <StyledBanner color={color}>
-            <StyledBannerTitle>
-                {title}
-            </StyledBannerTitle>
-            <StyledBannerContent>
-                {content}
-            </StyledBannerContent>
-            {
-                subContent ?
-                <StyledBannerSubContent>{subContent}</StyledBannerSubContent>
-                :
-                <></>
-            }
+            <StyledBannerShoulder />
+            <StyledBannerMain>
+                <StyledBannerTitle>
+                    {title}
+                </StyledBannerTitle>
+                <StyledBannerContent>
+                    {content}
+                </StyledBannerContent>
+                {
+                    subContent ?
+                    <StyledBannerSubContent>{subContent}</StyledBannerSubContent>
+                    :
+                    <></>
+                }
+            </StyledBannerMain>
+            <StyledBannerShoulder />
         </StyledBanner>
     );
 };

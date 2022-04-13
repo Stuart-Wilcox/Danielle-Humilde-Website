@@ -5,21 +5,31 @@ export const StyledAbout = styled.div`
 
 `;
 
-export const StyledAboutContent = styled.div`
+export const StyledAboutContent = styled.div<{
+    isMobile: boolean;
+}>`
     display: flex;
-    flex-direction: row;
+    flex-direction: ${props => props.isMobile ? 'column' : 'row'};
     align-items: flex-start;
 `;
 
-export const StyledAboutImage = styled.img`
+export const StyledAboutImage = styled.img<{
+    show: boolean;
+}>`
+    ${props => props.show ? '' : 'display: none;'}
     margin-top: 30px;
     max-height: 350px;
     border-radius: 20px;
     margin-right: 20px;
 `;
 
-export const StyledAboutIntro = styled.div`
-
+export const StyledAboutIntro = styled.div<{
+    isMobile: boolean;
+}>`
+    ${props => props.isMobile ? `
+        display: flex;
+        flex-direction: row;
+    ` : ''}
 `;
 
 
