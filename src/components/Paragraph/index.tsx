@@ -10,20 +10,24 @@ const StyledParagraph = styled.p<{
     color: #000;
 `;
 
-export interface IProps extends React.HTMLProps<HTMLDivElement> {
+export interface IProps extends React.HTMLProps<HTMLParagraphElement> {
     
 }
 
 const Paragraph: React.FC<IProps> = (props: IProps) => {
-    const {} = props;
+    const {
+        children,
+        style,
+    } = props;
 
     const isMobile = useIsMobile();
     
     return (
         <StyledParagraph
             isMobile={isMobile}
+            style={style}
         >
-            {props.children}
+            {children}
         </StyledParagraph>
     )
 }

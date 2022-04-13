@@ -21,6 +21,7 @@ const Subtitle: React.FC<IProps> = (props: IProps) => {
     const {
         color,
         italic,
+        style,
     } = props;
 
     const isMobile = useIsMobile();
@@ -30,6 +31,7 @@ const Subtitle: React.FC<IProps> = (props: IProps) => {
             color={color}
             italic={italic}
             isMobile={isMobile}
+            style={style}
         >
             {props.children}
         </StyledSubtitle>

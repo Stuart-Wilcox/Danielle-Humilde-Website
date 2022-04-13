@@ -6,6 +6,7 @@ import {
     Subtitle,
     Title,
 } from '../../../components';
+import { useIsMobile } from '../../../hooks';
 import {
     StyledWorkSection,
 } from '../index.style';
@@ -22,7 +23,9 @@ export interface IProps {
 const color = '#DECAF2';
 
 const TorontoTube: React.FC<IProps> = (props: IProps) => {
-    const {} = props
+    const {} = props;
+
+    const isMobile = useIsMobile();
     
     return (
         <>
@@ -100,7 +103,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>Literary Review 1</Title>
-                        <StyledRow>
+                        <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={{ flex: 1, marginRight: 20 }}>
                                 <Subtitle italic={true}>UX/UI Case Study: Redesigning a Public Transportation App for a Large Touristic City</Subtitle>
                                 <Paragraph>
@@ -144,7 +147,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>Literary Review 2</Title>
-                        <StyledRow>
+                        <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={{ flex: 1, marginRight: 20 }}>
                                 <Subtitle italic={true}> Best Mobile User Experience Design Practices for Public Transportation Apps</Subtitle>
                                 <Paragraph>
@@ -154,6 +157,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                     Altexsoft (2019). <a href={'https://www.altexsoft.com/blog/mobile/best-mobile-user-experience-design-practices-for-public-transportation-apps/'} target={'_blank'}>Best Mobile User Experience Design Practices for Public Transportation Apps | AltexSoft</a>
                                 </Paragraph>
                                 <StyledImg
+                                    style={{ maxWidth: 300 }}
                                     src={'/images/toronto_tube_transportation_app_2.png'}
                                     alt={'Transportation App 2'}
                                 />
@@ -188,7 +192,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>Literary Review 3</Title>
-                        <StyledRow>
+                        <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={{ flex: 1, marginRight: 20 }}>
                                 <Subtitle italic={true}>UX/UI Case Study: RTC's App</Subtitle>
                                 <Paragraph> 
@@ -232,7 +236,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>User Experience Map</Title>
-                        <StyledRow>
+                        <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div>
                                 <Paragraph>
                                     With this streamlined payment process, the user is able to access all information related to the TTC in one location.
@@ -253,6 +257,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                         <Title color={color} italic={true}>User Experience Mapping Process</Title>
                         <div style={{textAlign: 'center'}}>
                             <StyledImg
+                                style={{ maxWidth: 300 }}
                                 src={'/images/toronto_tube_experience_mapping_process.png'}
                                 alt={'Toronto Tube User Experience Mapping Process'}
                             />
@@ -260,7 +265,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>User Flow</Title>
-                        <StyledRow>
+                        <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <StyledImg
                                 style={{ maxHeight: 200, marginRight: 20 }}
                                 src={'/images/toronto_tube_user_flow_1.png'}
@@ -278,7 +283,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>User Flow - Just Visiting</Title>
-                        <StyledRow style={{ alignItems: 'center' }}>
+                        <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <StyledImg
                                 style={{ maxHeight: 300, marginRight: 20 }}
                                 src={'/images/toronto_tube_user_flow_3.png'}
@@ -321,7 +326,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>User Flow - Sign Up</Title>
-                        <StyledRow style={{ alignItems: 'center' }}>
+                        <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <div>
                                 <Paragraph>
                                     Users who select <strong>Sign Up</strong> are led to a page where they fill in their information to register (left image) for an account, load their card, and have the option on setting up Auto Reload. If the user selects Apple Pay or a saved payment method, the information on the second screen (right image) is automatically filled.
@@ -336,7 +341,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 alt={'Toronto Tube User Flow 4'}
                             />
                         </StyledRow>
-                        <StyledRow style={{ alignItems: 'center' }}>
+                        <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <StyledImg
                                 style={{ marginRight: 20, maxHeight: 300 }}
                                 src={'/images/toronto_tube_user_flow_5.png'}
@@ -354,7 +359,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>Styling</Title>
-                        <StyledRow style={{ alignItems: 'center' }}>
+                        <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <div style={{ flex: 1, marginRight: 20, textAlign: 'center' }}>
                                 <StyledImg
                                     src={'/images/toronto_tube_styling_1.png'}

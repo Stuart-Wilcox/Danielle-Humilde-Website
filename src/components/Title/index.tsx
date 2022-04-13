@@ -23,6 +23,7 @@ const Title: React.FC<IProps> = (props: IProps) => {
     const {
         color,
         italic,
+        style,
     } = props;
 
     const isMobile = useIsMobile();
@@ -32,6 +33,7 @@ const Title: React.FC<IProps> = (props: IProps) => {
             isMobile={isMobile}
             color={color}
             italic={italic}
+            style={style}
         >
             {props.children}
         </StyledTitle>

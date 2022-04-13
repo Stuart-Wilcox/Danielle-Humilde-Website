@@ -93,17 +93,23 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                         </Paragraph>
                                     </div>
                                 </StyledRow>
-                                <StyledRow>
-                                    <Paragraph>
+                                <StyledRow style={{ alignItems: 'center' }}>
+                                    <div style={{ marginLeft: 20 }}>
                                         <Subtitle italic={true} style={{ marginTop: 0 }}>User Pain Points</Subtitle>
                                         <ul>
                                             <li>Too many steps to make an account or log information; needs to be discreet</li>
                                             <li>No flashy notifications or icon to avoid attracting attention in case abusive partner checks phone regularly</li>
                                             <li>If using mobile device, layout of app needs to be easy to use with one hand in case of emergency to send notification to Emergency Contact</li>
                                         </ul>
-                                    </Paragraph>
-                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                                        <Paragraph style={{ color: '#F97781', fontSize: 20 }}>
+                                    </div>
+                                    <div>
+                                        <Paragraph
+                                            style={{
+                                                color: '#F97781',
+                                                fontSize: 20,
+                                                textAlign: 'center'
+                                            }}
+                                        >
                                             "I don't know who I am anymore, but I don't know how to leave."
                                         </Paragraph>
                                     </div>

@@ -15,6 +15,7 @@ const StyledContentMain = styled.div<{
     isMobile: boolean;
 }>`
     flex: ${props => props.isMobile ? '8' : '4'};
+    max-width: ${props => props.isMobile ? '80%' : '66%'};
 `;
 
 const Content: React.FC<{}> = ({ children }) => {
