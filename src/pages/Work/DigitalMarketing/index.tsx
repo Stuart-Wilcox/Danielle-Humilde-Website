@@ -7,6 +7,7 @@ import {
     Subtitle,
     Title,
 } from '../../../components';
+import { useIsMobile } from '../../../hooks';
 import {
     StyledWorkSection,
 } from '../index.style';
@@ -23,7 +24,16 @@ const color = '#CADFF2';
 
 const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
     const {} = props;
+
+    const isMobile = useIsMobile();
     
+    const mobileParagraphBoxStyle = {
+        backgroundColor: '#f4f4f4',
+        paddingLeft: 5,
+        paddingRight: 5,
+        border: 'solid #000 1px',
+    }
+
     return (
         <>
             <Banner
@@ -48,7 +58,9 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <StyledRow>
-                            <Paragraph>
+                            <Paragraph
+                                style={isMobile ? mobileParagraphBoxStyle : {}}
+                            >
                                 <Subtitle italic={true}>Research</Subtitle>
                                 <ul>
                                     <li>Identify who is the target audience/client for the business</li>
@@ -56,7 +68,9 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                     <li>Conduct market analysis to find growth opportunities and expand market reach</li>
                                 </ul>
                             </Paragraph>
-                            <Paragraph>
+                            <Paragraph
+                                style={isMobile ? mobileParagraphBoxStyle : {}}
+                            >
                                 <Subtitle italic={true}>Strategy</Subtitle>
                                 <ul>
                                     <li>Conduct analysis of who the target native audience/client is and test various digital media platforms </li>
@@ -104,6 +118,7 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                         </Paragraph>
                         <div style={{ textAlign: 'center' }}>
                             <StyledImg
+                                style={isMobile ? {maxWidth: 300} : {}}
                                 src={'/images/digital_marketing_seo.png'}
                                 alt={'Digital Marketing SEO Result'}
                             />
@@ -120,13 +135,13 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                 src={'/images/digital_marketing_market_growth.png'}
                                 alt={'Market Growth Opportunities'}
                             />
-                            <Paragraph style={{ marginLeft: 40, }}>
+                            <Paragraph style={{ marginLeft: isMobile ? 15 : 40 }}>
                                 <Paragraph>
                                     The two weeks leading up to Black Friday are some of the most competitive times in marketing to get the best paid ad slots online.
                                 </Paragraph>
                                 <Paragraph>
                                     <Subtitle italic={true}>Strategy</Subtitle>
-                                    <ul>
+                                    <ul style={isMobile ? {paddingInlineStart: 10} : {}}>
                                         <li>Start nurturing the target audience almost a month in advance so they will recognise the brand logo and name at the launch of Black Friday sales</li>
                                         <li>Experiment with the brand tone to see if we could expand their reach before Black Friday sale</li>
                                         <li>Create new social media and email templates to update their online presence</li>
@@ -139,27 +154,50 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </Paragraph>
                         </StyledRow>
-                        <StyledRow>
+                        <StyledRow
+                            style={isMobile ? {flexDirection: 'column', alignItems: 'center'} : {}}
+                        >
                             <Paragraph>
                                 <Subtitle italic={true}>Results</Subtitle>
                                 <ul>
                                     <li>One of the videos created was shared, and tagged, by a well-known brand, with over 250,000 followers (at the time)</li>
-                                    <li>Increased social media’s followers and market reach by 300% days before the launch of the Black Friday sale</li>
+                                    <li>Increased social media's followers and market reach by 300% days before the launch of the Black Friday sale</li>
                                     <li>Surpassed campaign and sale prediction by 150% with about 75% retention of those new followers after the sale ended</li>
                                 </ul>
                                 <Paragraph>
                                     Found market growth opportunities to expand reach by using numerous methods of producing content to increase visibility and sharability on social media
                                 </Paragraph>
                             </Paragraph>
-                            <StyledImg
-                                src={'/images/digital_marketing_example_1.png'}
-                                alt={'Digital Marketing Example 1'}
-                                style={{ marginRight: 12 }}
-                            />
-                            <StyledImg
-                                src={'/images/digital_marketing_example_2.png'}
-                                alt={'Ditigal Marketing Example 2'}
-                            />
+
+                            {
+                                isMobile ?
+                                (
+                                    <div style={{ textAlign: 'center' }}>
+                                        <StyledImg
+                                            src={'/images/digital_marketing_example_1.png'}
+                                            alt={'Digital Marketing Example 1'}
+                                        />
+                                        <StyledImg
+                                            src={'/images/digital_marketing_example_2.png'}
+                                            alt={'Ditigal Marketing Example 2'}
+                                        />
+                                    </div>
+                                )
+                                :
+                                (
+                                    <>
+                                        <StyledImg
+                                            src={'/images/digital_marketing_example_1.png'}
+                                            alt={'Digital Marketing Example 1'}
+                                            style={{ marginRight: 12 }}
+                                        />
+                                        <StyledImg
+                                            src={'/images/digital_marketing_example_2.png'}
+                                            alt={'Ditigal Marketing Example 2'}
+                                        />
+                                    </>
+                                )
+                            }
                         </StyledRow>
                     </StyledWorkSection>
                     <StyledWorkSection>
