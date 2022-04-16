@@ -4,10 +4,10 @@ import {
     Content,
     Paragraph,
     Title,
+    Section,
     Subtitle,
 } from '../../../components';
 import { useIsMobile } from '../../../hooks';
-import { StyledWorkSection } from '../index.style';
 import {
     StyledSubtleT,
     StyledRow,
@@ -121,8 +121,11 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
             />
             <Content>
                 <StyledSubtleT>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Problem Space</Title>
+                    <Section
+                        title={'Problem Space'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Paragraph>
                             As the pandemic drags on, the amount of domestic abuse victims increases . The majority of domestic abuse victims are women who do may not have the ability to defend themselves.
                         </Paragraph>
@@ -132,8 +135,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                         <Paragraph>
                             The most dangerous time for a women is when she tries to leave her abuser. About 26% of all women who are murdered by their spouse had left the relationship.
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
+                    </Section>
+                    <Section
+                        title={'Solution'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Title color={color} italic={true}>Solution</Title>
                         <Paragraph>
                             <Subtitle italic={true}>Subtle-T</Subtitle>
@@ -141,9 +148,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 This app made to help those who are experiencing domestic abuse and need access to the resources to help them determine a course of action and a plan to leave as quickly and quietly as possible
                             </Paragraph>
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Persona</Title>
+                    </Section>
+                    <Section
+                        title={'Persona'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={isMobile ? 
                                 {display: 'flex', flexDirection: 'row'} : {}
@@ -197,9 +207,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 </StyledRow>
                             </div>
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Research</Title>
+                    </Section>
+                    <Section
+                        title={'Research'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow>
                             <Paragraph>
                                 <ul>
@@ -233,9 +246,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 <li>Colours used are feminine and “girly” to avoid detection, but user have the option to hide the app icon so it is not present on their home screen</li>
                             </ul>
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Lo-fi Sketches</Title>
+                    </Section>
+                    <Section
+                        title={'Lo-fi Sketches'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? {flexDirection: 'column', alignItems: 'center'} : {}}>
                             {LofiSketchDescription}
                             <StyledImg
@@ -249,9 +265,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 alt={'Subtle-T Lo-fi Sketch 2'}
                             />                            
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Experience Map</Title>
+                    </Section>
+                    <Section
+                        title={'User Experience Map'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? {flexDirection: 'column', alignItems: 'center'} : {}}>
                             <Paragraph>
                                 <ul>
@@ -269,9 +288,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 alt={'User Experience Map'}
                             />
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Scenarios</Title>
+                    </Section>
+                    <Section
+                        title={'User Scenarios'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? {flexDirection: 'column-reverse', alignItems: 'center'} : {}}>
                             <StyledImg
                                 style={isMobile ? {maxWidth: 200} : { marginRight: 20, maxHeight: 400 }}
@@ -287,9 +309,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 <strong style={{ textDecoration: 'underline' }}>Emotional Support:</strong>&nbsp;Friends and family of victims can also download the app to keep contact with the victim (similar to sharing location on Find My Friends or status updates of peers on a video game).<br/>
                             </Paragraph>
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Journey Map</Title>
+                    </Section>
+                    <Section
+                        title={'Journey Map'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow>
                             <StyledImg
                                 style={{ maxHeight: 100, marginRight: 20 }}
@@ -326,9 +351,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                             src={'/images/subtle_t_journey_map_chart.png'}
                             alt={'Subtle-T User Journey Map Chart'}
                         />
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Flow</Title>
+                    </Section>
+                    <Section
+                        title={'User Flow'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={{ alignItems: 'center' }}>
                             <StyledImg
                                 style={{ maxHeight: isMobile ? 200 : 300 }}
@@ -356,9 +384,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 alt={'Subtle-T User Flow 4'}
                             />
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Flow - Home Screen</Title>
+                    </Section>
+                    <Section
+                        title={'User Flow - Home Screen'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={{ flexDirection: isMobile ? 'column-reverse' : 'row', alignItems: 'center' }}>
                             <div>
                                 <Paragraph>
@@ -386,9 +417,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 alt={'Subtle-T User Flow 5'}
                             />
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Flow - Day View</Title>
+                    </Section>
+                    <Section
+                        title={'User Flow - Day View'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
                             <StyledImg
                                 style={isMobile ? {maxHeight: 200} : { marginRight: 20 }}
@@ -404,9 +438,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Flow - Log Symptoms</Title>
+                    </Section>
+                    <Section
+                        title={'User Flow - Log Symptoms'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={{ flexDirection: isMobile ? 'column-reverse' : 'row', alignItems: 'center' }}>
                             <div>
                                 <Paragraph>
@@ -421,9 +458,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 alt={'Subtle-T User Flow 7'}
                             />
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Flow - Risk Analysis</Title>
+                    </Section>
+                    <Section
+                        title={'User Flow - Risk Analysis'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
                             <StyledImg
                                 style={isMobile ? {maxHeight: 200} : { marginRight: 20 }}
@@ -438,10 +478,13 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection style={{ marginTop: 10 }}>
+                    </Section>
+                    <Section
+                        title={'Styling'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
-                            <Title color={color} italic={true}>Styling</Title>
                             <div style={{ flex:1}} />
                             <StyledImg
                                 style={{ maxHeight: 50 }}
@@ -469,7 +512,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                         </StyledRow>
-                    </StyledWorkSection>
+                    </Section>
                 </StyledSubtleT>
             </Content>
         </>

@@ -4,13 +4,11 @@ import {
     Banner,
     Content,
     Paragraph,
+    Section,
     Subtitle,
     Title,
 } from '../../../components';
 import { useIsMobile } from '../../../hooks';
-import {
-    StyledWorkSection,
-} from '../index.style';
 import {
     StyledDigitalMarketing,
     StyledRow,
@@ -43,10 +41,11 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
             />
             <Content>
                 <StyledDigitalMarketing>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>
-                            Brand Refreshment
-                        </Title>
+                    <Section
+                        title={'Brand Refreshment'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Paragraph>
                             <strong style={{ fontStyle: 'italic' }}>Business Issue:</strong>&nbsp;
                             Business owner did not have a clear idea of who their target audience was for the company; therefore did not have a clear objective to their marketing strategies
@@ -55,8 +54,6 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                             <strong style={{ fontStyle: 'italic' }}>Overall Goal:</strong>&nbsp;
                             Create new marketing strategies that reflect new brand identity and tone
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
                         <StyledRow>
                             <Paragraph
                                 style={isMobile ? mobileParagraphBoxStyle : {}}
@@ -86,9 +83,12 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                 <li>Identified key priorities to maximise ROI for their marketing strategy that accurately represents their business goals and identity</li>
                             </ul>
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Organic SEO Strategy</Title>
+                    </Section>
+                    <Section
+                        title={'Organic SEO Strategy'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Paragraph>
                             <strong style={{ fontStyle: 'italic' }}>Overall Goal:</strong>&nbsp;
                             Update and develop company website to optimise SEO organically
@@ -123,9 +123,12 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                 alt={'Digital Marketing SEO Result'}
                             />
                         </div>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Market Growth Opportunities</Title>
+                    </Section>
+                    <Section
+                        title={'Market Growth Opportunities'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Paragraph>
                             <strong style={{ fontStyle: 'italic' }}>Campaign Objective:</strong>&nbsp;
                             Create marketing strategy for Black Friday to Boxing Day sale
@@ -199,16 +202,19 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                 )
                             }
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Work With Me</Title>
+                    </Section>
+                    <Section
+                        title={'Work With Me'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Paragraph style={{ textAlign: 'center' }}>
                             Interested in learning more about my design methods or have a project you would like to work with me on?
                             <br />
                             <br />
                             <Link to={'/contact'}>Send me a message here :)</Link>
                         </Paragraph>
-                    </StyledWorkSection>
+                    </Section>
                 </StyledDigitalMarketing>
             </Content>
         </>

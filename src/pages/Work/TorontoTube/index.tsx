@@ -3,13 +3,11 @@ import {
     Banner,
     Content,
     Paragraph,
+    Section,
     Subtitle,
     Title,
 } from '../../../components';
 import { useIsMobile } from '../../../hooks';
-import {
-    StyledWorkSection,
-} from '../index.style';
 import {
     StyledTorontoTube,
     StyledRow,
@@ -37,8 +35,11 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
             />
             <Content>
                 <StyledTorontoTube>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Problem Space</Title>
+                    <Section
+                        title={'Problem Space'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Subtitle italic={true}>
                             How can we streamline the payment experience for TTC riders?
                         </Subtitle>
@@ -51,9 +52,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                         <Paragraph>
                             Rather than having to carry multiple different bank and membership cards, many businesses have adapted to storing their user’s information on an app or mobile wallet.
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Solution</Title>
+                    </Section>
+                    <Section
+                        title={'Solution'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Paragraph>
                             For newcomers who just moved to Toronto, or visitors who want to explore the city, this Contactless Payment method allows the riders to have a much more seamless experience when riding the TTC. Rather than having to buy a pass at Shoppers Drug Mart, or last minute at a station, riders can just scan a QR code at a station to purchase a mobile card to load and ride the TTC as much or as little as they want.
                         </Paragraph>
@@ -63,9 +67,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                         <Paragraph>
                             Whether they are infrequent TTC riders or people who just moved to the city, Toronto Tube is an app that allows its users to get from A to B without any detours.
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Research</Title>
+                    </Section>
+                    <Section
+                        title={'Research'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Paragraph>
                             <Subtitle italic={true}>
                                 Netnography (Reddit r/TTC)
@@ -100,9 +107,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 </ul>
                             </ul>
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Literary Review 1</Title>
+                    </Section>
+                    <Section
+                        title={'Literary Review 1'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={{ flex: 1, marginRight: 20 }}>
                                 <Subtitle italic={true}>UX/UI Case Study: Redesigning a Public Transportation App for a Large Touristic City</Subtitle>
@@ -144,9 +154,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Literary Review 2</Title>
+                    </Section>
+                    <Section
+                        title={'Literary Review 2'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={{ flex: 1, marginRight: 20 }}>
                                 <Subtitle italic={true}> Best Mobile User Experience Design Practices for Public Transportation Apps</Subtitle>
@@ -189,9 +202,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Literary Review 3</Title>
+                    </Section>
+                    <Section
+                        title={'Literary Review 3'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={{ flex: 1, marginRight: 20 }}>
                                 <Subtitle italic={true}>UX/UI Case Study: RTC's App</Subtitle>
@@ -233,9 +249,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Experience Map</Title>
+                    </Section>
+                    <Section
+                        title={'User Experience Map'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div>
                                 <Paragraph>
@@ -252,9 +271,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 alt={'Toronto Tube User Experience Map'}
                             />
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Experience Mapping Process</Title>
+                    </Section>
+                    <Section
+                        title={'User Experience Mapping Process'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <div style={{textAlign: 'center'}}>
                             <StyledImg
                                 style={{ maxWidth: 300 }}
@@ -262,9 +284,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 alt={'Toronto Tube User Experience Mapping Process'}
                             />
                         </div>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Flow</Title>
+                    </Section>
+                    <Section
+                        title={'User Flow'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <StyledImg
                                 style={{ maxHeight: 200, marginRight: 20 }}
@@ -280,9 +305,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 alt={'Toronto Tube User Flow 2'}
                             />
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Flow - Just Visiting</Title>
+                    </Section>
+                    <Section
+                        title={'User Flow - Just Visiting'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <StyledImg
                                 style={{ maxHeight: 300, marginRight: 20 }}
@@ -323,9 +351,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>User Flow - Sign Up</Title>
+                    </Section>
+                    <Section
+                        title={'User Flow - Sign Up'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <div>
                                 <Paragraph>
@@ -356,9 +387,12 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                         </StyledRow>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>Styling</Title>
+                    </Section>
+                    <Section
+                        title={'Styling'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <div style={{ flex: 1, marginRight: 20, textAlign: 'center' }}>
                                 <StyledImg
@@ -379,7 +413,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                         </StyledRow>
-                    </StyledWorkSection>
+                    </Section>
                 </StyledTorontoTube>
             </Content>
         </>

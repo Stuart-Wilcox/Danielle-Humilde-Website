@@ -5,11 +5,9 @@ import {
     Paragraph,
     Title,
     Subtitle,
+    Section,
 } from '../../../components';
 import { useIsMobile } from '../../../hooks';
-import {
-    StyledWorkSection,
-} from '../index.style';
 import {
     StyledSmartMirror,
     StyledRow,
@@ -37,18 +35,16 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
             />
             <Content>
                 <StyledSmartMirror>
-                <StyledWorkSection>
-                        <Title color={color} italic={true}>
-                            Problem Space
-                        </Title>
-                        <Paragraph>
-                            How can we simplify morning routines especially when running behind?
-                        </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>
-                            Solution
-                        </Title>
+                    <Section
+                        title={'Problem Space'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
+                            <Paragraph>
+                                How can we simplify morning routines especially when running behind?
+                            </Paragraph>
+                    </Section>
+                    <Section title={'Solution'} color={color}>
                         <Paragraph>
                             Mornings are flustering enough especially when you are in a rush, the Smart Mirror is a tool to help organise your morning so you can have a clear head to start the day.  
                         </Paragraph>
@@ -64,11 +60,12 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                                 <li>Ease morning routines, especially when in a rush</li>
                             </ul>
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>
-                            Design Phase
-                        </Title>
+                    </Section>
+                    <Section
+                        title={'Design Phase'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow>
                             <Paragraph>
                                 <Subtitle italic={true}>
@@ -103,14 +100,12 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                         <Paragraph>
                             Main connection capabilities are through the phone app which controls access to email, calendar, weather, health info, etc. to customise experience for each user based on what information they require in the morning 
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title
-                            color={color}
-                            italic={true}
-                        >
-                            Research
-                        </Title>
+                    </Section>
+                    <Section
+                        title={'Research'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Paragraph>
                             Affinity Diagram to understand what mindset target user would be in when using the Smart Mirror
                         </Paragraph>
@@ -121,11 +116,12 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                                 alt={'Smart Mirror Research'}
                             />
                         </div>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>
-                            User Scenario Testing
-                        </Title>
+                    </Section>
+                    <Section
+                        title={'User Scenario Testing'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <Paragraph>
                             Mid-fi prototype screens of app connecting to Smart Mirror to customise experience.
                         </Paragraph>
@@ -180,11 +176,12 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                                 </ul>
                             </ul>
                         </Paragraph>
-                    </StyledWorkSection>
-                    <StyledWorkSection>
-                        <Title color={color} italic={true}>
-                            User Journey Map
-                        </Title>
+                    </Section>
+                    <Section
+                        title={'User Journey Map'}
+                        color={color}
+                        defaultOpen={!isMobile}
+                    >
                         <StyledRow style={{marginBottom: 8}}>
                             <StyledImg
                                 style={{ marginRight: 8 }}
@@ -220,7 +217,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                                 <li>Personal and customisable executive assistant for people who cannot afford a real executive assistant</li>
                             </ul>
                         </Paragraph>
-                    </StyledWorkSection>
+                    </Section>
                 </StyledSmartMirror>
             </Content>
         </>
