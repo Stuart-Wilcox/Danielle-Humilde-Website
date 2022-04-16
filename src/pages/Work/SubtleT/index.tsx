@@ -6,6 +6,7 @@ import {
     Title,
     Subtitle,
 } from '../../../components';
+import { useIsMobile } from '../../../hooks';
 import { StyledWorkSection } from '../index.style';
 import {
     StyledSubtleT,
@@ -20,8 +21,96 @@ export interface IProps {
 const color = '#F97781';
 
 const SubtleT: React.FC<IProps> = (props: IProps) => {
-    const {} = props
+    const {} = props;
+
+    const isMobile = useIsMobile();
+
+    const TargetUser = (
+        <Paragraph style={isMobile ? {marginLeft: 10} : {}}>
+            <Subtitle italic={true} style={{ marginTop: -10 }}>Target User</Subtitle>
+            <Paragraph>
+                Emma is a 29 year old nurse who has been with her partner for over 7 years, and lived together for the last 4 years. Over the past 4 years, she has become a victim of domestic and verbal abuse. In the beginning, her friends would tell her their worries but would brush them aside. Slowly she has lost almost all of her friends because she would defend her abuser. Now she wants to leave the relationship but does not know how to safely.
+            </Paragraph>
+        </Paragraph>
+    );
+
+    const UserImage = (
+        <>
+            <StyledImg
+                style={isMobile ? {maxWidth: 100} : {}}
+                src={'/images/subtle_t_persona.png'}
+                alt={'Subtle-T Persona'}
+            />
+            <Paragraph style={{
+                color: "#F97781", fontSize: 14, fontStyle: 'italic', marginTop: 0, textAlign: 'center', fontWeight: 700 }}
+            >
+                Emma
+            </Paragraph>
+            <Paragraph>
+                <strong>Age:</strong>&nbsp;29<br/>
+                <strong>Job:</strong>&nbsp;Nurse<br/>
+                <strong>Location:</strong>&nbsp;Toronto, ON<br/>
+            </Paragraph>
+        </>
+    )
+
+    const UserGoals = (
+        <Paragraph>
+            <Subtitle italic={true} style={{ marginTop: -10 }}>User Goals</Subtitle>
+            <ul>
+                <li>Access to social workers and counselors for advice</li>
+                <li>Shelter's nearby and contact information</li>
+                <li>Password protected app in case partner checks phone regularly</li>
+                <li>Able to hide app icon on  home screen to avoid detection</li>
+                <li>"Check In" ability for friends/family with the app to monitor user's home situation</li>
+                <li>Store photos as evidence if user eventually wants to press charges</li>
+            </ul>
+        </Paragraph>
+    );
+
+    const UserQuote = (
+        <Paragraph
+            style={{
+                color: '#F97781',
+                fontSize: 20,
+                textAlign: 'center'
+            }}
+        >
+            "I don't know who I am anymore, but I don't know how to leave."
+        </Paragraph>
+    );
+
+    const LofiSketchDescription = (
+        <div>
+            <Paragraph>
+                I wanted to create an app where all the proper resources needed for domestic violence victims can be found in a safe and protected place.
+            </Paragraph>
+            <Paragraph>
+                In 2019, there were over 107,000 victims of police-reported intimate partner violence. Women accounted for almost 8 in 10 victims of all incidents.
+            </Paragraph>
+        </div>
+    );
+
+    const UserFlow = (
+        <Paragraph>
+            When user first enters the app, they have two options of how they want to register. The user can register for an account for themselves or on behalf of someone else if they are in a delicate situation. In this analysis, we will be following creating an account option for Myself.
+        </Paragraph>
+    );
     
+    const PostUserFlow = (
+        <div>
+            <Paragraph>
+                After completing the screens for setting up an account, the user will be able to customise their experience by choosing what sort of articles and references they would like access to. This can be changed in the app settings under profile.
+            </Paragraph>
+            <Paragraph>
+                The screen on the right is to understand the user's situation so social workers and counsellors they may chat with can also have that information in order to help them.
+            </Paragraph>
+            <Paragraph>
+                The menu bar is located at the bottom on the screen so it is the most accessible for the user as well as it is the most common mobile design for apps, therefore easy to use and quick to learn.
+            </Paragraph>
+        </div>
+    );
+
     return (
         <>
             <Banner
@@ -41,7 +130,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                             "Intimate-partner violence is a serious crime that affects Canadians from coast to coast., in both urban and rural areas. It often takes place behind closed doors and can make the victim, who are typically women, feel isolated and afraid." - The Honourable Bill Blair, Minister of Public Safety and Emergency Preparedness
                         </Paragraph>
                         <Paragraph>
-                        The most dangerous time for a women is when she tries to leave her abuser. About 26% of all women who are murdered by their spouse had left the relationship.
+                            The most dangerous time for a women is when she tries to leave her abuser. About 26% of all women who are murdered by their spouse had left the relationship.
                         </Paragraph>
                     </StyledWorkSection>
                     <StyledWorkSection>
@@ -55,63 +144,55 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>Persona</Title>
-                        <StyledRow>
-                            <div>
-                                <StyledImg
-                                    src={'/images/subtle_t_persona.png'}
-                                    alt={'Subtle-T Persona'}
-                                />
-                                <Paragraph style={{
-                                    color: "#F97781", fontSize: 14, fontStyle: 'italic', marginTop: 0, textAlign: 'center', fontWeight: 700 }}>Emma</Paragraph>
-                                <Paragraph>
-                                    <strong>Age:</strong>&nbsp;29<br/>
-                                    <strong>Job:</strong>&nbsp;Nurse<br/>
-                                    <strong>Location:</strong>&nbsp;Toronto, ON<br/>
-                                </Paragraph>
+                        <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
+                            <div style={isMobile ? 
+                                {display: 'flex', flexDirection: 'row'} : {}
+                            }>
+                                {
+                                    isMobile ?
+                                    (
+                                        <div>
+                                            {UserImage}
+                                        </div>
+                                    )
+                                    :
+                                    (UserImage)
+                                }
+                                {isMobile ? TargetUser : <></>}
                             </div>
+                            { isMobile ? UserQuote : <></> }
                             <div>
                                 <StyledRow>
-                                    <div style={{ flex: 1, marginLeft: 20 }}>
+                                    {
+                                        isMobile ?
+                                        <></>
+                                        :
+                                        (
+                                            <>
+                                                <div style={{ flex: 1, marginLeft: isMobile ? 0 : 20 }}>
+                                                    {TargetUser}
+                                                </div>
+                                                <div style={{ flex: 1, marginLeft: 20 }}>
+                                                    {UserGoals}
+                                                </div>
+                                            </>
+                                        )
+                                    }
+                                </StyledRow>
+                                { isMobile ? UserGoals : <></> }
+                                <StyledRow style={{ alignItems: 'center' }}>
+                                    <div style={isMobile ? {} : { marginLeft: 20 }}>
+                                        <Subtitle italic={true} style={{ marginTop: 0 }}>User Pain Points</Subtitle>
                                         <Paragraph>
-                                            <Subtitle italic={true} style={{ marginTop: -10 }}>Target User</Subtitle>
-                                            <Paragraph>
-                                                Emma is a 29 year old nurse who has been with her partner for over 7 years, and lived together for the last 4 years. Over the past 4 years, she has become a victim of domestic and verbal abuse. In the beginning, her friends would tell her their worries but would brush them aside. Slowly she has lost almost all of her friends because she would defend her abuser. Now she wants to leave the relationship but does not know how to safely.
-                                            </Paragraph>
-                                        </Paragraph>
-                                    </div>
-                                    <div style={{ flex: 1, marginLeft: 20 }}>
-                                        <Paragraph>
-                                            <Subtitle italic={true} style={{ marginTop: -10 }}>User Goals</Subtitle>
                                             <ul>
-                                                <li>Access to social workers and counselors for advice</li>
-                                                <li>Shelter's nearby and contact information</li>
-                                                <li>Password protected app in case partner checks phone regularly</li>
-                                                <li>Able to hide app icon on  home screen to avoid detection</li>
-                                                <li>"Check In" ability for friends/family with the app to monitor user's home situation</li>
-                                                <li>Store photos as evidence if user eventually wants to press charges</li>
+                                                <li>Too many steps to make an account or log information; needs to be discreet</li>
+                                                <li>No flashy notifications or icon to avoid attracting attention in case abusive partner checks phone regularly</li>
+                                                <li>If using mobile device, layout of app needs to be easy to use with one hand in case of emergency to send notification to Emergency Contact</li>
                                             </ul>
                                         </Paragraph>
                                     </div>
-                                </StyledRow>
-                                <StyledRow style={{ alignItems: 'center' }}>
-                                    <div style={{ marginLeft: 20 }}>
-                                        <Subtitle italic={true} style={{ marginTop: 0 }}>User Pain Points</Subtitle>
-                                        <ul>
-                                            <li>Too many steps to make an account or log information; needs to be discreet</li>
-                                            <li>No flashy notifications or icon to avoid attracting attention in case abusive partner checks phone regularly</li>
-                                            <li>If using mobile device, layout of app needs to be easy to use with one hand in case of emergency to send notification to Emergency Contact</li>
-                                        </ul>
-                                    </div>
                                     <div>
-                                        <Paragraph
-                                            style={{
-                                                color: '#F97781',
-                                                fontSize: 20,
-                                                textAlign: 'center'
-                                            }}
-                                        >
-                                            "I don't know who I am anymore, but I don't know how to leave."
-                                        </Paragraph>
+                                        {isMobile ? <></> : UserQuote}
                                     </div>
                                 </StyledRow>
                             </div>
@@ -135,14 +216,14 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                             </Paragraph>
                         </StyledRow>
                         <Subtitle italic={true}>How to design an app to help domestic violence victims without putting them in danger?</Subtitle>
-                        <Paragraph>
+                        <Paragraph style={{marginLeft: 20}}>
                             <Subtitle italic={true}>Gaps in Industry</Subtitle>
                             <ul>
                                 <li>A lot of research and information about domestic violence, but difficult to find immediate help info</li>
                                 <li>Not many apps that help assist domestic violence victims, mainly designed to help with coping</li>
                             </ul>
                         </Paragraph>
-                        <Paragraph>
+                        <Paragraph style={{marginLeft:20}}>
                             <Subtitle italic={true}>Concept Design Ideas</Subtitle>
                             <ul>
                                 <li>Password protected in case partner goes through their devices</li>
@@ -155,15 +236,8 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>Lo-fi Sketches</Title>
-                        <StyledRow>
-                            <div>
-                                <Paragraph>
-                                    I wanted to create an app where all the proper resources needed for domestic violence victims can be found in a safe and protected place.
-                                </Paragraph>
-                                <Paragraph>
-                                    In 2019, there were over 107,000 victims of police-reported intimate partner violence. Women accounted for almost 8 in 10 victims of all incidents.
-                                </Paragraph>
-                            </div>
+                        <StyledRow style={isMobile ? {flexDirection: 'column', alignItems: 'center'} : {}}>
+                            {LofiSketchDescription}
                             <StyledImg
                                 style={{ marginLeft: 20 }}
                                 src={'/images/subtle_t_lofi_sketch_1.png'}
@@ -178,7 +252,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>User Experience Map</Title>
-                        <StyledRow>
+                        <StyledRow style={isMobile ? {flexDirection: 'column', alignItems: 'center'} : {}}>
                             <Paragraph>
                                 <ul>
                                     <li>Designed to optimise mobile interface design, ability to navigate the app with one hand.</li>
@@ -198,9 +272,9 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>User Scenarios</Title>
-                        <StyledRow>
+                        <StyledRow style={isMobile ? {flexDirection: 'column-reverse', alignItems: 'center'} : {}}>
                             <StyledImg
-                                style={{ marginRight: 20, maxHeight: 400 }}
+                                style={isMobile ? {maxWidth: 200} : { marginRight: 20, maxHeight: 400 }}
                                 src={'/images/subtle_t_user_scenarios.png'}
                                 alt={'Subtle-T User Scenarios'}
                             />
@@ -225,15 +299,30 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                             <Paragraph style={{ marginTop: 0 }}>
                                 <strong>Target User:</strong>&nbsp;Emma wants to find the resources to help her leave her abusive partner. She needs a place to collect all the information she needs without raising suspicion and a secure place where she knows her partner cannot access. Emma's sister also check's in on her well- being, but they are unable to go into depth unless they meet up alone
                             </Paragraph>
+                            {
+                                isMobile ?
+                                <></>
+                                :
+                                <Paragraph style={{ marginTop: 0 }}>
+                                    <strong>Goals & Expectations:</strong>&nbsp;Emma's primary goal is to find the proper resources to help her leave her abusive home safely. She has lost many of her old friends and has very few people she can turn to for help. Emma's main goal is to come up with a plan to leave her abuser, without him knowing, and eventually file a restraining order against him
+                                </Paragraph>
+                            }
+                        </StyledRow>
+                        {
+                            isMobile ?
                             <Paragraph style={{ marginTop: 0 }}>
                                 <strong>Goals & Expectations:</strong>&nbsp;Emma's primary goal is to find the proper resources to help her leave her abusive home safely. She has lost many of her old friends and has very few people she can turn to for help. Emma's main goal is to come up with a plan to leave her abuser, without him knowing, and eventually file a restraining order against him
                             </Paragraph>
-                        </StyledRow>
+                            :
+                            <></>
+                        }
                         <StyledImg
+                            style={isMobile ? {maxWidth: 300} : {}}
                             src={'/images/subtle_t_journey_map.png'}
                             alt={'Subtle-T User Journey Map'}
                         />
                         <StyledImg
+                            style={isMobile ? {maxWidth: 300} : {}}
                             src={'/images/subtle_t_journey_map_chart.png'}
                             alt={'Subtle-T User Journey Map Chart'}
                         />
@@ -242,36 +331,25 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                         <Title color={color} italic={true}>User Flow</Title>
                         <StyledRow style={{ alignItems: 'center' }}>
                             <StyledImg
-                                style={{ maxHeight: 300 }}
+                                style={{ maxHeight: isMobile ? 200 : 300 }}
                                 src={'/images/subtle_t_user_flow_1.png'}
                                 alt={'Subtle-T User Flow 1'}
                             />
                             <StyledImg
-                                style={{ marginLeft: 20, marginRight: 20, maxHeight: 300 }}
+                                style={{ marginLeft: 20, marginRight: 20, maxHeight: isMobile ? 200 : 300 }}
                                 src={'/images/subtle_t_user_flow_2.png'}
                                 alt={'Subtle-T User Flow 2'}
                             />
                             <StyledImg
-                                style={{ maxHeight: 300, marginRight: 20 }}
+                                style={{ maxHeight: isMobile ? 200 : 300, marginRight: 20 }}
                                 src={'/images/subtle_t_user_flow_3.png'}
                                 alt={'Subtle-T User Flow 3'}
                             />
-                            <Paragraph>
-                                When user first enters the app, they have two options of how they want to register. The user can register for an account for themselves or on behalf of someone else if they are in a delicate situation. In this analysis, we will be following creating an account option for Myself.
-                            </Paragraph>
+                            {isMobile ? <></> : UserFlow}
                         </StyledRow>
-                        <StyledRow style={{ alignItems: 'center' }}>
-                            <div>
-                                <Paragraph>
-                                    After completing the screens for setting up an account, the user will be able to customise their experience by choosing what sort of articles and references they would like access to. This can be changed in the app settings under profile.
-                                </Paragraph>
-                                <Paragraph>
-                                    The screen on the right is to understand the user's situation so social workers and counsellors they may chat with can also have that information in order to help them.
-                                </Paragraph>
-                                <Paragraph>
-                                    The menu bar is located at the bottom on the screen so it is the most accessible for the user as well as it is the most common mobile design for apps, therefore easy to use and quick to learn.
-                                </Paragraph>
-                            </div>
+                        {isMobile ? UserFlow : <></>}
+                        <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
+                            {PostUserFlow}
                             <StyledImg
                                 style={{ marginLeft: 20, maxHeight: 300 }}
                                 src={'/images/subtle_t_user_flow_4.png'}
@@ -281,7 +359,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>User Flow - Home Screen</Title>
-                        <StyledRow  style={{ alignItems: 'center' }}>
+                        <StyledRow style={{ flexDirection: isMobile ? 'column-reverse' : 'row', alignItems: 'center' }}>
                             <div>
                                 <Paragraph>
                                     Main home screen is designed to look like a menstruation tracking app to defer suspicion. Top corners have access to main screen and chat inbox where user can contact social workers, counsellors, and their contacts to give a status update of their well-being.
@@ -303,7 +381,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                             <StyledImg
-                                style={{ marginLeft: 20 }}
+                                style={isMobile ? {maxHeight: 200} : { marginLeft: 20 }}
                                 src={'/images/subtle_t_user_flow_5.png'}
                                 alt={'Subtle-T User Flow 5'}
                             />
@@ -311,9 +389,9 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>User Flow - Day View</Title>
-                        <StyledRow style={{ alignItems: 'center' }}>
+                        <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
                             <StyledImg
-                                style={{ marginRight: 20 }}
+                                style={isMobile ? {maxHeight: 200} : { marginRight: 20 }}
                                 src={'/images/subtle_t_user_flow_6.png'}
                                 alt={'Subtle-T User Flow 6'}
                             />
@@ -329,7 +407,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>User Flow - Log Symptoms</Title>
-                        <StyledRow style={{ alignItems: 'center' }}>
+                        <StyledRow style={{ flexDirection: isMobile ? 'column-reverse' : 'row', alignItems: 'center' }}>
                             <div>
                                 <Paragraph>
                                     When logging symptoms, it is really to log information of how the user is feeling during or after a situation with their partner. User is able to log the activity (type of abuse that took place), and symptoms of the aftermath (bruising, cuts, etc). Mood is to track their emotions of the situation and keep a diary or journal under How Are You.
@@ -338,7 +416,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                             </div>
                             <StyledImg
-                                style={{ marginLeft: 20 }}
+                                style={isMobile ? {maxHeight: 200} : { marginLeft: 20 }}
                                 src={'/images/subtle_t_user_flow_7.png'}
                                 alt={'Subtle-T User Flow 7'}
                             />
@@ -346,9 +424,9 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     </StyledWorkSection>
                     <StyledWorkSection>
                         <Title color={color} italic={true}>User Flow - Risk Analysis</Title>
-                        <StyledRow style={{ alignItems: 'center' }}>
+                        <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
                             <StyledImg
-                                style={{ marginRight: 20 }}
+                                style={isMobile ? {maxHeight: 200} : { marginRight: 20 }}
                                 src={'/images/subtle_t_user_flow_8.png'}
                                 alt={'Subtle-T User Flow 8'}
                             />
@@ -362,7 +440,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                         </StyledRow>
                     </StyledWorkSection>
                     <StyledWorkSection style={{ marginTop: 10 }}>
-                        <StyledRow style={{ alignItems: 'center' }}>
+                        <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
                             <Title color={color} italic={true}>Styling</Title>
                             <div style={{ flex:1}} />
                             <StyledImg
