@@ -87,9 +87,13 @@ const MobileNavbar: React.FC<IProps> = (props: IProps) => {
                     >
                         {
                             workMenuOpen ?
-                            <KeyboardArrowUp />
+                            <KeyboardArrowUp
+                                style={{ color: '#696767' }}
+                            />
                             :
-                            <KeyboardArrowDown />
+                            <KeyboardArrowDown
+                                style={{ color: '#696767' }}
+                            />
                         }
                     </StyledMobileNavbarShoulder>
                 </StyledNavbarGroup>

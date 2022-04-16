@@ -6,6 +6,7 @@ import {
     Title,
     Subtitle,
 } from '../../../components';
+import { useIsMobile } from '../../../hooks';
 import {
     StyledWorkSection,
 } from '../index.style';
@@ -22,7 +23,9 @@ export interface IProps {
 const color = '#EFB877';
 
 const SmartMirror: React.FC<IProps> = (props: IProps) => {
-    const {} = props
+    const {} = props;
+
+    const isMobile = useIsMobile();
     
     return (
         <>
@@ -113,6 +116,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                         </Paragraph>
                         <div style={{textAlign:'center'}}>
                             <StyledImg
+                                style={isMobile ? {maxWidth: 300} : {}}
                                 src={'/images/smart_mirror_research.png'}
                                 alt={'Smart Mirror Research'}
                             />
@@ -130,6 +134,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                         </Paragraph>
                         <div style={{textAlign:'center'}}>
                             <StyledImg
+                                style={isMobile ? {maxWidth: 300} : {}}
                                 src={'/images/smart_mirror_user_scenario.png'}
                                 alt={'Smart Mirror User Scenario Testing'}
                             />
@@ -137,38 +142,84 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                         <Subtitle italic={true}>
                             User Testing Notes
                         </Subtitle>
-                        <ul>
-                            <li>User is able to create account and sign in easily (Screen 1)</li>
+                        
+                        <Paragraph>
                             <ul>
-                                <li>"Simple log in information and steps"</li>
+                                <li>User is able to create account and sign in easily (Screen 1)</li>
+                                <ul>
+                                    <li>"Simple log in information and steps"</li>
+                                </ul>
+                                <li>Pair Smart Mirror to phone, assumed that SM is set up and plugged in, pop up screen saying display ready to pair (Screen 2)</li>
+                                <ul>
+                                    <li>"Easy to pair, similar to other Bluetooth devices"</li>
+                                </ul>
+                                <li>Connect apps already existing on phone to display on SM (Screen 3)</li>
+                                <ul>
+                                    <li>Able to choose which apps I want to display</li>
+                                    <li>"Simple enough to choose from the list of existing apps I would have on my phone that I want for my daily overview on SM"</li>
+                                </ul>
+                                <li>Customise display (Screen 4 & 5)</li>
+                                <ul>
+                                    <li>"I assume I can just press and drag to customise the display"</li>
+                                    <li>User was able to figure out how to move around apps that they chose to install</li>
+                                    <li>User was able to customise size of widgets based on what information they wanted largest on screen of SM</li>
+                                    <li>Looks like the Apple control centre that I am already familiar with, to customise</li>
+                                </ul>
                             </ul>
-                            <li>Pair Smart Mirror to phone, assumed that SM is set up and plugged in, pop up screen saying display ready to pair (Screen 2)</li>
-                            <ul>
-                                <li>"Easy to pair, similar to other Bluetooth devices"</li>
-                            </ul>
-                            <li>Connect apps already existing on phone to display on SM (Screen 3)</li>
-                            <ul>
-                                <li>Able to choose which apps I want to display</li>
-                                <li>"Simple enough to choose from the list of existing apps I would have on my phone that I want for my daily overview on SM"</li>
-                            </ul>
-                            <li>Customise display (Screen 4 & 5)</li>
-                            <ul>
-                                <li>"I assume I can just press and drag to customise the display"</li>
-                                <li>User was able to figure out how to move around apps that they chose to install</li>
-                                <li>User was able to customise size of widgets based on what information they wanted largest on screen of SM</li>
-                                <li>Looks like the Apple control centre that I am already familiar with, to customise</li>
-                            </ul>
-                        </ul>
+                        </Paragraph>
+
                         <Paragraph>
                             *Testing complete and successful*
                         </Paragraph>
                         <Subtitle italic={true}>Post User Testing Notes</Subtitle>
-                        <ul>
-                            <li>Misunderstood the size of mirror and worried that there was no space for reflection</li>
+                        <Paragraph>
                             <ul>
-                                <li>Had to explain display from App to Smart Mirror</li>
+                                <li>Misunderstood the size of mirror and worried that there was no space for reflection</li>
+                                <ul>
+                                    <li>Had to explain display from App to Smart Mirror</li>
+                                </ul>
                             </ul>
-                        </ul>
+                        </Paragraph>
+                    </StyledWorkSection>
+                    <StyledWorkSection>
+                        <Title color={color} italic={true}>
+                            User Journey Map
+                        </Title>
+                        <StyledRow style={{marginBottom: 8}}>
+                            <StyledImg
+                                style={{ marginRight: 8 }}
+                                src={'/images/smart_mirror_persona.png'}
+                                alt={'Smart Mirror Persona'}
+                            />
+                            <Paragraph style={{marginTop: 0}}>
+                                <strong>Persona:</strong>&nbsp;Alex<br/>
+                                <strong>Scenario:</strong>&nbsp;Alex wants a customisable display for their daily overview placed in a strategic and useful location for everyday use<br/>
+                                <strong>User Expectations:</strong>&nbsp;Makes morning routines much simpler to get ready for the day<br/>
+                            </Paragraph>
+                        </StyledRow>
+                        <StyledImg
+                            style={isMobile ? {maxWidth: 300} : {}}
+                            src={'/images/smart_mirror_journey_map.png'}
+                            alt={'Smart Mirror Journey Map'}
+                        />
+                        <Subtitle>
+                            Insights
+                        </Subtitle>
+                        <Paragraph>
+                            <ul>
+                                <li>Main goal for the user is to give them the information that they need to prepare for the day, in a convenient location while they are getting ready</li>
+                                <li>Information such as weather, calendar events, and tasks to complete for the day, were the most mentioned during research and testing interviews</li>
+                            </ul>
+                        </Paragraph>
+                        <Subtitle>
+                            Internal Ownership
+                        </Subtitle>
+                        <Paragraph>
+                            <ul>
+                                <li>Track user activity, how they interact wit hSmart Mirror, how long is each use, and how frequently do they use it, to better upgrades and updates in future software</li>
+                                <li>Personal and customisable executive assistant for people who cannot afford a real executive assistant</li>
+                            </ul>
+                        </Paragraph>
                     </StyledWorkSection>
                 </StyledSmartMirror>
             </Content>
