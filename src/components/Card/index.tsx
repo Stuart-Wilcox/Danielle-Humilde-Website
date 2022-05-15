@@ -26,7 +26,7 @@ const Card: React.FC<IProps> = (props: IProps) => {
     } = props
     
     return (
-        <div style={{ flex: 5 }}>
+        <div>
             <Link to={location}>
                 <StyledCard
                     color={color}
