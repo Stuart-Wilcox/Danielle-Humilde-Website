@@ -4,7 +4,11 @@ import {
 } from '../../components';
 
 export const StyledContact = styled.div`
+    margin-top: 50px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 255px);
 `;
 
 export const StyledContactText = styled(Paragraph)`
@@ -43,6 +47,8 @@ export const StyledContactFormSendButton = styled.button`
     padding: 12px 50px;
     border: none;
     cursor: pointer;
+    max-width: fit-content;
+    align-self: center;
 
     &:hover {
         opacity: 0.5;

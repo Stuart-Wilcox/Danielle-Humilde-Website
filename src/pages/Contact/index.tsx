@@ -65,6 +65,7 @@ const Contact: React.FC<IProps> = (props: IProps) => {
                 >
                     Send
                 </StyledContactFormSendButton>
+                <div style={{flex:1}}/>
             </StyledContact>
         </Content>
     )
