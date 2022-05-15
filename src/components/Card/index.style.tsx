@@ -20,9 +20,17 @@ export const StyledCardImageShoulder = styled.div`
     flex: 1;
 `;
 
+export const StyledCardImageContainer = styled.div`
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+`;
+
 export const StyledCardImage = styled.img`
-    max-height: 300px;
-    margin: 20px;
+    margin: auto;
     border-radius: 20px; /* images are poorly cropped */
 `;
 

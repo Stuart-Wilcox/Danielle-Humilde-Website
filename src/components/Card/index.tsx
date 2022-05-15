@@ -5,6 +5,7 @@ import {
 import {
     StyledCard,
     StyledCardImageShoulder,
+    StyledCardImageContainer,
     StyledCardImage,
     StyledCardContent,
 } from './index.style';
@@ -26,21 +27,23 @@ const Card: React.FC<IProps> = (props: IProps) => {
     
     return (
         <div style={{ flex: 5 }}>
-        <Link to={location}>
-        <StyledCard
-            color={color}
-        >
-            <StyledCardImage
-                src={image}
-                alt={name}
-            />
-            <StyledCardContent className={'card-content'}>
-                <div style={{flex:1}} />
-                {name}
-                <div style={{flex:1}} />
-            </StyledCardContent>
-        </StyledCard>
-        </Link>
+            <Link to={location}>
+                <StyledCard
+                    color={color}
+                >
+                    <StyledCardImageContainer>
+                        <StyledCardImage
+                            src={image}
+                            alt={name}
+                        />
+                    </StyledCardImageContainer>
+                    <StyledCardContent className={'card-content'}>
+                        <div style={{flex:1}} />
+                        {name}
+                        <div style={{flex:1}} />
+                    </StyledCardContent>
+                </StyledCard>
+            </Link>
         </div>
     )
 }
