@@ -32,6 +32,12 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
         border: 'solid #000 1px',
     }
 
+    const marketGrowthIntro = (
+        <Paragraph style={isMobile ? {fontSize: 8} : {}}>
+            The two weeks leading up to Black Friday are some of the most competitive times in marketing to get the best paid ad slots online.
+        </Paragraph>
+    );
+
     return (
         <>
             <Banner
@@ -54,7 +60,7 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                             <strong style={{ fontStyle: 'italic' }}>Overall Goal:</strong>&nbsp;
                             Create new marketing strategies that reflect new brand identity and tone
                         </Paragraph>
-                        <StyledRow>
+                        <StyledRow style={{ alignItems: 'stretch' }}>
                             <Paragraph
                                 style={isMobile ? mobileParagraphBoxStyle : {}}
                             >
@@ -93,8 +99,10 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                             <strong style={{ fontStyle: 'italic' }}>Overall Goal:</strong>&nbsp;
                             Update and develop company website to optimise SEO organically
                         </Paragraph>
-                        <StyledRow>
-                            <Paragraph>
+                        <StyledRow style={{alignItems: 'stretch'}}>
+                            <Paragraph
+                                style={isMobile ? mobileParagraphBoxStyle : {}}
+                            >
                                 <Subtitle italic={true}>Research</Subtitle>
                                 <ul>
                                     <li>Content analysis on website to see how to improve their searchability on Google and increase their ranking organically</li>
@@ -102,7 +110,9 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                     <li>SWOT analysis of local competitors and find quick opportunities for business to increase their SEO ranking</li>
                                 </ul>
                             </Paragraph>
-                            <Paragraph>
+                            <Paragraph
+                                style={isMobile ? mobileParagraphBoxStyle : {}}
+                            >
                                 <Subtitle italic={true}>Strategy</Subtitle>
                                 <ul>
                                     <li>Updated their URL structure and metadata descriptions of their pages, specifically targeting the pages with local information of where their business operates</li>
@@ -133,17 +143,26 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                             <strong style={{ fontStyle: 'italic' }}>Campaign Objective:</strong>&nbsp;
                             Create marketing strategy for Black Friday to Boxing Day sale
                         </Paragraph>
+                        { isMobile ? marketGrowthIntro : <></> }
                         <StyledRow>
                             <StyledImg
                                 src={'/images/digital_marketing_market_growth.png'}
                                 alt={'Market Growth Opportunities'}
+                                style={isMobile ? {maxHeight: 255} : {}}
                             />
-                            <Paragraph style={{ marginLeft: isMobile ? 15 : 40 }}>
-                                <Paragraph>
-                                    The two weeks leading up to Black Friday are some of the most competitive times in marketing to get the best paid ad slots online.
-                                </Paragraph>
-                                <Paragraph>
-                                    <Subtitle italic={true}>Strategy</Subtitle>
+                            <Paragraph
+                                style={{ marginLeft: isMobile ? 10 : 40, marginTop: 0 }}
+                            >
+                                {isMobile ? <></> : marketGrowthIntro}
+                                <Paragraph
+                                    style={isMobile ? {fontSize: 10, margin: 0} : {}}
+                                >
+                                    <Subtitle
+                                        italic={true}
+                                        style={isMobile ? {margin: 0} : {}}
+                                    >
+                                        Strategy
+                                    </Subtitle>
                                     <ul style={isMobile ? {paddingInlineStart: 10} : {}}>
                                         <li>Start nurturing the target audience almost a month in advance so they will recognise the brand logo and name at the launch of Black Friday sales</li>
                                         <li>Experiment with the brand tone to see if we could expand their reach before Black Friday sale</li>
@@ -152,7 +171,9 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                         <li>Videos, photos, testimonials, Instagram Lives, Q&As, etc.</li>
                                     </ul>
                                 </Paragraph>
-                                <Paragraph>
+                                <Paragraph
+                                    style={isMobile ? {fontSize: 6} : {}}
+                                >
                                     *This business carries more speciality type products so I created short videos showing how to use various products in everyday settings to make it more relatable to the consumer*
                                 </Paragraph>
                             </Paragraph>
@@ -175,14 +196,16 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                             {
                                 isMobile ?
                                 (
-                                    <div style={{ textAlign: 'center' }}>
+                                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
                                         <StyledImg
                                             src={'/images/digital_marketing_example_1.png'}
                                             alt={'Digital Marketing Example 1'}
+                                            style={isMobile ? {maxHeight: 255} : {}}
                                         />
                                         <StyledImg
                                             src={'/images/digital_marketing_example_2.png'}
                                             alt={'Ditigal Marketing Example 2'}
+                                            style={isMobile ? {maxHeight: 255} : {}}
                                         />
                                     </div>
                                 )
@@ -202,6 +225,10 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                 )
                             }
                         </StyledRow>
+                        <hr
+                            style={{ marginTop: isMobile ? 60 : 100, marginBottom: isMobile ? 60 : 100 }}
+                        />
+
                     </Section>
                     <Section
                         title={'Work With Me'}

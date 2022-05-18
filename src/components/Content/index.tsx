@@ -14,8 +14,8 @@ const StyledContentShoulder = styled.div`
 const StyledContentMain = styled.div<{
     isMobile: boolean;
 }>`
-    flex: ${props => props.isMobile ? '8' : '4'};
-    max-width: ${props => props.isMobile ? '80%' : '66%'};
+    flex: ${props => props.isMobile ? '10' : '4'};
+    max-width: ${props => props.isMobile ? 'unset' : '66%'};
 `;
 
 const Content: React.FC<{}> = ({ children }) => {
