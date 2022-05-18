@@ -73,7 +73,7 @@ const ProjectGrid: React.FC<IProps> = (props: IProps) => {
     }, [cardsPerRow]);
     
     return (
-        <StyledGrid>
+        <StyledGrid isMobile={isMobile}>
             {
                 cards.map((cardRow, index) => (
                     <StyledGridRow key={index}>

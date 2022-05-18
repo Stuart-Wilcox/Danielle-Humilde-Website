@@ -20,17 +20,18 @@ export const StyledCardImageShoulder = styled.div`
     flex: 1;
 `;
 
-export const StyledCardImageContainer = styled.div`
-    height: 350px;
-    width: 350px;
+export const StyledCardImageContainer = styled.div<{ _width: number }>`
+    height: ${props => props._width > 1100 ? '350px' : '250px'};
+    width: ${props => props._width > 1100 ? '350px' : '250px'};
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
 `;
 
-export const StyledCardImage = styled.img`
+export const StyledCardImage = styled.img<{ _width: number }>`
     margin: auto;
+    max-height: ${props => props._width > 1100 ? 'unset;' : '210px;width:unset;'}
     border-radius: 20px; /* images are poorly cropped */
 `;
 

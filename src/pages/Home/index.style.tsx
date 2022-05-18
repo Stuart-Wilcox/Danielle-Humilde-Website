@@ -6,8 +6,8 @@ export const StyledHome = styled.div`
     align-items: center;
 `;
 
-export const StyledGrid = styled.div`
-    width: 100%;
+export const StyledGrid = styled.div<{ isMobile: boolean }>`
+    width: ${props => props.isMobile ? 'unset' : '100%'};
 `;
 
 export const StyledGridRow = styled.div`

@@ -2,6 +2,7 @@ import * as React from 'react'
 import {
     Link,
 } from 'react-router-dom';
+import { useWidth } from '../../hooks';
 import {
     StyledCard,
     StyledCardImageShoulder,
@@ -23,7 +24,9 @@ const Card: React.FC<IProps> = (props: IProps) => {
         location,
         color,
         image,
-    } = props
+    } = props;
+
+    const width = useWidth();
     
     return (
         <div>
@@ -31,8 +34,11 @@ const Card: React.FC<IProps> = (props: IProps) => {
                 <StyledCard
                     color={color}
                 >
-                    <StyledCardImageContainer>
+                    <StyledCardImageContainer
+                        _width={width}
+                    >
                         <StyledCardImage
+                            _width={width}
                             src={image}
                             alt={name}
                         />
