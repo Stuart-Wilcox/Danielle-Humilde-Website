@@ -141,7 +141,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                         color={color}
                         defaultOpen={!isMobile}
                     >
-                        <Title color={color} italic={true}>Solution</Title>
                         <Paragraph>
                             <Subtitle italic={true}>Subtle-T</Subtitle>
                             <Paragraph>

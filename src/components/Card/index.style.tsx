@@ -43,17 +43,7 @@ export const StyledCardImageContainer = styled.div<{ _width: number }>`
 
 export const StyledCardImage = styled.img<{ _width: number }>`
     margin: auto;
-    max-height: ${props => {
-        if (props._width > 1100) {
-            return '210px;width:unset;';
-        }
-        else if (props._width > DEFAULT_MOBILE_DEVICE_WIDTH_THRESHOLD) {
-            return '150px;width:unset;'
-        }
-        else {
-            return 'unset;'
-        }
-    }}
+    height: 75%;
     border-radius: 20px; /* images are poorly cropped */
 `;
 
