@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { DEFAULT_MOBILE_DEVICE_WIDTH_THRESHOLD } from '../../hooks/useIsMobile'
 
-export const StyledCard = styled.div<{ color: string }>`
+export const StyledCard = styled.div<{ color: string, isFirst?: boolean, isLast?: boolean }>`
     border-radius: 20px;
     background-color: ${props => props.color};
     display: flex;
@@ -8,6 +9,17 @@ export const StyledCard = styled.div<{ color: string }>`
     align-items: center;
     position: relative;
     overflow: hidden;
+    margin: ${props => {
+        if (props.isFirst) {
+            return '0 20px 0 0';
+        }
+        else if (props.isLast) {
+            return '0 0 0 20px';
+        }
+        else {
+            return '0 20px';
+        }
+    }};
     
     &:hover {
         & > div.card-content {
@@ -21,8 +33,8 @@ export const StyledCardImageShoulder = styled.div`
 `;
 
 export const StyledCardImageContainer = styled.div<{ _width: number }>`
-    height: ${props => props._width > 1100 ? '350px' : '250px'};
-    width: ${props => props._width > 1100 ? '350px' : '250px'};
+    height: ${props => props._width > DEFAULT_MOBILE_DEVICE_WIDTH_THRESHOLD ? `${(props._width/3)-40}px` : `${2*props._width/3}px`};
+    width: ${props => props._width > DEFAULT_MOBILE_DEVICE_WIDTH_THRESHOLD ? `${(props._width/3)-40}px` : `${2*props._width/3}px`};
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -31,7 +43,17 @@ export const StyledCardImageContainer = styled.div<{ _width: number }>`
 
 export const StyledCardImage = styled.img<{ _width: number }>`
     margin: auto;
-    max-height: ${props => props._width > 1100 ? 'unset;' : '210px;width:unset;'}
+    max-height: ${props => {
+        if (props._width > 1100) {
+            return '210px;width:unset;';
+        }
+        else if (props._width > DEFAULT_MOBILE_DEVICE_WIDTH_THRESHOLD) {
+            return '150px;width:unset;'
+        }
+        else {
+            return 'unset;'
+        }
+    }}
     border-radius: 20px; /* images are poorly cropped */
 `;
 

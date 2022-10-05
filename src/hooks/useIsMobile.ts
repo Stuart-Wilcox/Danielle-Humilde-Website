@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DEFAULT_MOBILE_DEVICE_WIDTH_THRESHOLD = 750;
+export const DEFAULT_MOBILE_DEVICE_WIDTH_THRESHOLD = 750;
 
 const useIsMobile = (mobileWidthThreshold=DEFAULT_MOBILE_DEVICE_WIDTH_THRESHOLD) => {
     const [isMobile, setIsMobile] = React.useState<boolean>(window.innerWidth < mobileWidthThreshold);

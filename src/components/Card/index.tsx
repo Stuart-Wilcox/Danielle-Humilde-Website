@@ -16,6 +16,8 @@ export interface IProps {
     location: string;
     color: string;
     image: string;
+    isFirst?: boolean;
+    isLast?: boolean;
 }
 
 const Card: React.FC<IProps> = (props: IProps) => {
@@ -24,6 +26,8 @@ const Card: React.FC<IProps> = (props: IProps) => {
         location,
         color,
         image,
+        isFirst,
+        isLast,
     } = props;
 
     const width = useWidth();
@@ -33,6 +37,8 @@ const Card: React.FC<IProps> = (props: IProps) => {
             <Link to={location}>
                 <StyledCard
                     color={color}
+                    isFirst={isFirst}
+                    isLast={isLast}
                 >
                     <StyledCardImageContainer
                         _width={width}

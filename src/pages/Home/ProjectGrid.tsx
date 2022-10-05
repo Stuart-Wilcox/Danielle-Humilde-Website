@@ -85,14 +85,9 @@ const ProjectGrid: React.FC<IProps> = (props: IProps) => {
                                         location={cardData.location}
                                         color={cardData.color}
                                         image={cardData.image}
+                                        isFirst={index===0}
+                                        isLast={index===(cardRow.length-1)}
                                     />
-
-                                    { 
-                                        index !== cardRow.length -1 ?
-                                            <div style={{ flex:1 }}/> 
-                                        :
-                                           <></>
-                                    }
                                 </React.Fragment>
                             ))
                         }
