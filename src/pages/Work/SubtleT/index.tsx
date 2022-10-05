@@ -124,7 +124,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Problem Space'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        defaultOpen={true}
                     >
                         <Paragraph>
                             As the pandemic drags on, the amount of domestic abuse victims increases . The majority of domestic abuse victims are women who do may not have the ability to defend themselves.
@@ -139,7 +139,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Solution'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <Paragraph>
                             <Subtitle italic={true}>Subtle-T</Subtitle>
@@ -151,7 +150,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Persona'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={isMobile ? 
@@ -210,7 +208,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Research'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow>
                             <Paragraph>
@@ -249,7 +246,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Lo-fi Sketches'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? {flexDirection: 'column', alignItems: 'center'} : {}}>
                             {LofiSketchDescription}
@@ -268,7 +264,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Experience Map'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? {flexDirection: 'column', alignItems: 'center'} : {}}>
                             <Paragraph>
@@ -291,7 +286,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Scenarios'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? {flexDirection: 'column-reverse', alignItems: 'center'} : {}}>
                             <StyledImg
@@ -312,7 +306,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Journey Map'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow>
                             <StyledImg
@@ -354,7 +347,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Flow'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={{ alignItems: 'center' }}>
                             <StyledImg
@@ -387,7 +379,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Flow - Home Screen'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={{ flexDirection: isMobile ? 'column-reverse' : 'row', alignItems: 'center' }}>
                             <div>
@@ -420,7 +411,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Flow - Day View'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
                             <StyledImg
@@ -441,7 +431,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Flow - Log Symptoms'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={{ flexDirection: isMobile ? 'column-reverse' : 'row', alignItems: 'center' }}>
                             <div>
@@ -461,7 +450,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Flow - Risk Analysis'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
                             <StyledImg
@@ -481,7 +469,6 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Styling'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
                             <div style={{ flex:1}} />

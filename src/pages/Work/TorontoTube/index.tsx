@@ -38,7 +38,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Problem Space'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        defaultOpen={true}
                     >
                         <Subtitle italic={true}>
                             How can we streamline the payment experience for TTC riders?
@@ -56,7 +56,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Solution'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <Paragraph>
                             For newcomers who just moved to Toronto, or visitors who want to explore the city, this Contactless Payment method allows the riders to have a much more seamless experience when riding the TTC. Rather than having to buy a pass at Shoppers Drug Mart, or last minute at a station, riders can just scan a QR code at a station to purchase a mobile card to load and ride the TTC as much or as little as they want.
@@ -71,7 +70,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Research'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <Paragraph>
                             <Subtitle italic={true}>
@@ -111,7 +109,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Literary Review 1'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={{ flex: 1, marginRight: 20 }}>
@@ -158,7 +155,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Literary Review 2'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={{ flex: 1, marginRight: 20 }}>
@@ -206,7 +202,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Literary Review 3'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div style={{ flex: 1, marginRight: 20 }}>
@@ -253,7 +248,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Experience Map'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <div>
@@ -275,7 +269,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Experience Mapping Process'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <div style={{textAlign: 'center'}}>
                             <StyledImg
@@ -288,7 +281,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Flow'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <StyledImg
@@ -309,7 +301,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Flow - Just Visiting'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <StyledImg
@@ -355,7 +346,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Flow - Sign Up'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <div>
@@ -391,7 +381,6 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Styling'}
                         color={color}
-                        defaultOpen={!isMobile}
                     >
                         <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <div style={{ flex: 1, marginRight: 20, textAlign: 'center' }}>

@@ -50,7 +50,7 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Brand Refreshment'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        defaultOpen={true}
                     >
                         <Paragraph>
                             <strong style={{ fontStyle: 'italic' }}>Business Issue:</strong>&nbsp;
@@ -93,7 +93,7 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Organic SEO Strategy'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        
                     >
                         <Paragraph>
                             <strong style={{ fontStyle: 'italic' }}>Overall Goal:</strong>&nbsp;
@@ -137,7 +137,7 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Market Growth Opportunities'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        
                     >
                         <Paragraph>
                             <strong style={{ fontStyle: 'italic' }}>Campaign Objective:</strong>&nbsp;
@@ -233,7 +233,7 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Work With Me'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        
                     >
                         <Paragraph style={{ textAlign: 'center' }}>
                             Interested in learning more about my design methods or have a project you would like to work with me on?

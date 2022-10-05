@@ -38,7 +38,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Problem Space'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        defaultOpen={true}
                     >
                             <Paragraph>
                                 How can we simplify morning routines especially when running behind?
@@ -64,7 +64,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Design Phase'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        
                     >
                         <StyledRow>
                             <Paragraph>
@@ -104,7 +104,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'Research'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        
                     >
                         <Paragraph>
                             Affinity Diagram to understand what mindset target user would be in when using the Smart Mirror
@@ -120,7 +120,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Scenario Testing'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        
                     >
                         <Paragraph>
                             Mid-fi prototype screens of app connecting to Smart Mirror to customise experience.
@@ -180,7 +180,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                     <Section
                         title={'User Journey Map'}
                         color={color}
-                        defaultOpen={!isMobile}
+                        
                     >
                         <StyledRow style={{marginBottom: 8}}>
                             <StyledImg
