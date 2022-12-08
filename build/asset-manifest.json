@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.e193ec00.css",
-    "main.js": "/static/js/main.137c8794.js",
-    "static/js/787.4d4b6833.chunk.js": "/static/js/787.4d4b6833.chunk.js",
-    "index.html": "/index.html",
-    "main.e193ec00.css.map": "/static/css/main.e193ec00.css.map",
-    "main.137c8794.js.map": "/static/js/main.137c8794.js.map",
-    "787.4d4b6833.chunk.js.map": "/static/js/787.4d4b6833.chunk.js.map"
+    "main.css": "/Danielle-Humilde-Website/static/css/main.e193ec00.css",
+    "main.js": "/Danielle-Humilde-Website/static/js/main.28f89be6.js",
+    "static/js/787.4d4b6833.chunk.js": "/Danielle-Humilde-Website/static/js/787.4d4b6833.chunk.js",
+    "index.html": "/Danielle-Humilde-Website/index.html",
+    "main.e193ec00.css.map": "/Danielle-Humilde-Website/static/css/main.e193ec00.css.map",
+    "main.28f89be6.js.map": "/Danielle-Humilde-Website/static/js/main.28f89be6.js.map",
+    "787.4d4b6833.chunk.js.map": "/Danielle-Humilde-Website/static/js/787.4d4b6833.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e193ec00.css",
-    "static/js/main.137c8794.js"
+    "static/js/main.28f89be6.js"
   ]
 }

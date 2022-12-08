@@ -2,6 +2,7 @@
   "name": "dh-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Stuart-Wilcox.github.io/Danielle-Humilde-Website",
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
@@ -25,6 +26,8 @@
   "scripts": {
     "start": "node index.js",
     "start:dev": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -48,6 +51,7 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.25"
+    "@types/styled-components": "^5.1.25",
+    "gh-pages": "^4.0.0"
   }
 }
