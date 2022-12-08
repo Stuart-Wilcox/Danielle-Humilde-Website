@@ -2,7 +2,7 @@
   "name": "dh-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Stuart-Wilcox.github.io/Danielle-Humilde-Website",
+  "homepage": "https://Stuart-Wilcox.github.io/Danielle-Humilde-Website/#",
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
