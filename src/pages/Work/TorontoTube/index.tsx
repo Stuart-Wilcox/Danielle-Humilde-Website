@@ -8,6 +8,7 @@ import {
     Title,
 } from '../../../components';
 import { useIsMobile } from '../../../hooks';
+import { getImageUrl } from '../../../utils';
 import {
     StyledTorontoTube,
     StyledRow,
@@ -120,7 +121,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                     Brave Geeks Team (2018). <a href={'https://uxplanet.org/ux-ui-case-study-redesigning-a-public-transportation-app-for-a-large-touristic-city-932a2157fa21?gi=c70838a140d9'} target={'_blank'}>UX/UI Case Study: Redesigning a Public Transportation App for a Large Touristic City | by BraveGeeks Team | UX Planet</a>
                                 </Paragraph>
                                 <StyledImg
-                                    src={'/images/toronto_tube_transportation_app_1.png'}
+                                    src={getImageUrl('toronto_tube_transportation_app_1.png')}
                                     alt={'Transportation App 1'}
                                 />
                             </div>
@@ -167,7 +168,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                 </Paragraph>
                                 <StyledImg
                                     style={{ maxWidth: 300 }}
-                                    src={'/images/toronto_tube_transportation_app_2.png'}
+                                    src={getImageUrl('toronto_tube_transportation_app_2.png')}
                                     alt={'Transportation App 2'}
                                 />
                             </div>
@@ -213,7 +214,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                                     Jimenez, Yannick (2019). <a href={'https://medium.com/@yanick_jimenez/rtc-nomade-a-ux-case-study-f1070afb2db0'} target={'_blank'}>Redesigning Quebec’s public transit app-a UX case study | by Yanick Jimenez | Medium</a>
                                 </Paragraph>
                                 <StyledImg
-                                    src={'/images/toronto_tube_transportation_app_3.png'}
+                                    src={getImageUrl('toronto_tube_transportation_app_3.png')}
                                     alt={'Transportation App 3'}
                                 />
                             </div>
@@ -261,7 +262,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                             </div>
                             <StyledImg
                                 style={{maxHeight: 300}}
-                                src={'/images/toronto_tube_experience_map.png'}
+                                src={getImageUrl('toronto_tube_experience_map.png')}
                                 alt={'Toronto Tube User Experience Map'}
                             />
                         </StyledRow>
@@ -273,7 +274,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                         <div style={{textAlign: 'center'}}>
                             <StyledImg
                                 style={{ maxWidth: 300 }}
-                                src={'/images/toronto_tube_experience_mapping_process.png'}
+                                src={getImageUrl('toronto_tube_experience_mapping_process.png')}
                                 alt={'Toronto Tube User Experience Mapping Process'}
                             />
                         </div>
@@ -285,7 +286,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                         <StyledRow style={isMobile ? { flexDirection: 'column' } : {}}>
                             <StyledImg
                                 style={{ maxHeight: 200, marginRight: 20 }}
-                                src={'/images/toronto_tube_user_flow_1.png'}
+                                src={getImageUrl('toronto_tube_user_flow_1.png')}
                                 alt={'Toronto Tube User Flow 1'}
                             />
                             <Paragraph>
@@ -293,7 +294,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                             </Paragraph>
                             <StyledImg
                                 style={{ maxHeight: 200, marginLeft: 20 }}
-                                src={'/images/toronto_tube_user_flow_2.png'}
+                                src={getImageUrl('toronto_tube_user_flow_2.png')}
                                 alt={'Toronto Tube User Flow 2'}
                             />
                         </StyledRow>
@@ -305,7 +306,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                         <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <StyledImg
                                 style={{ maxHeight: 300, marginRight: 20 }}
-                                src={'/images/toronto_tube_user_flow_3.png'}
+                                src={getImageUrl('toronto_tube_user_flow_3.png')}
                                 alt={'Toronto Tube User Flow 3'}
                             />
                             <div>
@@ -358,14 +359,14 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                             </div>
                             <StyledImg
                                 style={{ marginLeft: 20, maxHeight: 300 }}
-                                src={'/images/toronto_tube_user_flow_4.png'}
+                                src={getImageUrl('toronto_tube_user_flow_4.png')}
                                 alt={'Toronto Tube User Flow 4'}
                             />
                         </StyledRow>
                         <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <StyledImg
                                 style={{ marginRight: 20, maxHeight: 300 }}
-                                src={'/images/toronto_tube_user_flow_5.png'}
+                                src={getImageUrl('toronto_tube_user_flow_5.png')}
                                 alt={'Toronto Tube User Flow 5'}
                             />
                             <div>
@@ -385,7 +386,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                         <StyledRow style={isMobile ? { flexDirection: 'column', alignItems: 'center' } : {alignItems: 'center'}}>
                             <div style={{ flex: 1, marginRight: 20, textAlign: 'center' }}>
                                 <StyledImg
-                                    src={'/images/toronto_tube_styling_1.png'}
+                                    src={getImageUrl('toronto_tube_styling_1.png')}
                                     alt={'Toronto Tube Styling 1'}
                                 />
                                 <Paragraph>
@@ -394,7 +395,7 @@ const TorontoTube: React.FC<IProps> = (props: IProps) => {
                             </div>
                             <div style={{ flex: 1, textAlign: 'center' }}>
                                 <StyledImg
-                                    src={'/images/toronto_tube_styling_2.png'}
+                                    src={getImageUrl('toronto_tube_styling_2.png')}
                                     alt={'Toronto Tube Styling 2'}
                                 />
                                 <Paragraph>

@@ -8,6 +8,7 @@ import {
     Subtitle,
 } from '../../../components';
 import { useIsMobile } from '../../../hooks';
+import { getImageUrl } from '../../../utils';
 import {
     StyledSubtleT,
     StyledRow,
@@ -38,7 +39,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
         <>
             <StyledImg
                 style={isMobile ? {maxWidth: 100} : {}}
-                src={'/images/subtle_t_persona.png'}
+                src={getImageUrl('subtle_t_persona.png')}
                 alt={'Subtle-T Persona'}
             />
             <Paragraph style={{
@@ -251,12 +252,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                             {LofiSketchDescription}
                             <StyledImg
                                 style={{ marginLeft: 20 }}
-                                src={'/images/subtle_t_lofi_sketch_1.png'}
+                                src={getImageUrl('subtle_t_lofi_sketch_1.png')}
                                 alt={'Subtle-T Lo-fi Sketch 1'}
                             />
                             <StyledImg
                                 style={{ marginTop: 50, marginLeft: 20 }}
-                                src={'/images/subtle_t_lofi_sketch_2.png'}
+                                src={getImageUrl('subtle_t_lofi_sketch_2.png')}
                                 alt={'Subtle-T Lo-fi Sketch 2'}
                             />                            
                         </StyledRow>
@@ -278,7 +279,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                             </Paragraph>
                             <StyledImg
                                 style={{ maxHeight: 300 }}
-                                src={'/images/subtle_t_user_experience_map.png'}
+                                src={getImageUrl('subtle_t_user_experience_map.png')}
                                 alt={'User Experience Map'}
                             />
                         </StyledRow>
@@ -290,7 +291,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                         <StyledRow style={isMobile ? {flexDirection: 'column-reverse', alignItems: 'center'} : {}}>
                             <StyledImg
                                 style={isMobile ? {maxWidth: 200} : { marginRight: 20, maxHeight: 400 }}
-                                src={'/images/subtle_t_user_scenarios.png'}
+                                src={getImageUrl('subtle_t_user_scenarios.png')}
                                 alt={'Subtle-T User Scenarios'}
                             />
                             <Paragraph style={{ lineHeight: '25px' }}>
@@ -310,7 +311,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                         <StyledRow>
                             <StyledImg
                                 style={{ maxHeight: 100, marginRight: 20 }}
-                                src={'/images/subtle_t_persona.png'}
+                                src={getImageUrl('subtle_t_persona.png')}
                                 alt={'Subtle-T Person'}
                             />
                             <Paragraph style={{ marginTop: 0 }}>
@@ -335,12 +336,12 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                         }
                         <StyledImg
                             style={isMobile ? {maxWidth: 300} : {}}
-                            src={'/images/subtle_t_journey_map.png'}
+                            src={getImageUrl('subtle_t_journey_map.png')}
                             alt={'Subtle-T User Journey Map'}
                         />
                         <StyledImg
                             style={isMobile ? {maxWidth: 300} : {}}
-                            src={'/images/subtle_t_journey_map_chart.png'}
+                            src={getImageUrl('subtle_t_journey_map_chart.png')}
                             alt={'Subtle-T User Journey Map Chart'}
                         />
                     </Section>
@@ -351,17 +352,17 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                         <StyledRow style={{ alignItems: 'center' }}>
                             <StyledImg
                                 style={{ maxHeight: isMobile ? 200 : 300 }}
-                                src={'/images/subtle_t_user_flow_1.png'}
+                                src={getImageUrl('subtle_t_user_flow_1.png')}
                                 alt={'Subtle-T User Flow 1'}
                             />
                             <StyledImg
                                 style={{ marginLeft: 20, marginRight: 20, maxHeight: isMobile ? 200 : 300 }}
-                                src={'/images/subtle_t_user_flow_2.png'}
+                                src={getImageUrl('subtle_t_user_flow_2.png')}
                                 alt={'Subtle-T User Flow 2'}
                             />
                             <StyledImg
                                 style={{ maxHeight: isMobile ? 200 : 300, marginRight: 20 }}
-                                src={'/images/subtle_t_user_flow_3.png'}
+                                src={getImageUrl('subtle_t_user_flow_3.png')}
                                 alt={'Subtle-T User Flow 3'}
                             />
                             {isMobile ? <></> : UserFlow}
@@ -371,7 +372,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                             {PostUserFlow}
                             <StyledImg
                                 style={{ marginLeft: 20, maxHeight: 300 }}
-                                src={'/images/subtle_t_user_flow_4.png'}
+                                src={getImageUrl('subtle_t_user_flow_4.png')}
                                 alt={'Subtle-T User Flow 4'}
                             />
                         </StyledRow>
@@ -403,7 +404,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                             </div>
                             <StyledImg
                                 style={isMobile ? {maxHeight: 200} : { marginLeft: 20 }}
-                                src={'/images/subtle_t_user_flow_5.png'}
+                                src={getImageUrl('subtle_t_user_flow_5.png')}
                                 alt={'Subtle-T User Flow 5'}
                             />
                         </StyledRow>
@@ -415,7 +416,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                         <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
                             <StyledImg
                                 style={isMobile ? {maxHeight: 200} : { marginRight: 20 }}
-                                src={'/images/subtle_t_user_flow_6.png'}
+                                src={getImageUrl('subtle_t_user_flow_6.png')}
                                 alt={'Subtle-T User Flow 6'}
                             />
                             <div>
@@ -442,7 +443,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                             </div>
                             <StyledImg
                                 style={isMobile ? {maxHeight: 200} : { marginLeft: 20 }}
-                                src={'/images/subtle_t_user_flow_7.png'}
+                                src={getImageUrl('subtle_t_user_flow_7.png')}
                                 alt={'Subtle-T User Flow 7'}
                             />
                         </StyledRow>
@@ -454,7 +455,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                         <StyledRow style={{ flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
                             <StyledImg
                                 style={isMobile ? {maxHeight: 200} : { marginRight: 20 }}
-                                src={'/images/subtle_t_user_flow_8.png'}
+                                src={getImageUrl('subtle_t_user_flow_8.png')}
                                 alt={'Subtle-T User Flow 8'}
                             />
                             <div>
@@ -474,7 +475,7 @@ const SubtleT: React.FC<IProps> = (props: IProps) => {
                             <div style={{ flex:1}} />
                             <StyledImg
                                 style={{ maxHeight: 50 }}
-                                src={'/images/subtle_t_logo.png'}
+                                src={getImageUrl('subtle_t_logo.png')}
                                 alt={'Subtle-T Logo'}
                             />
                             <div style={{ flex:1}} />

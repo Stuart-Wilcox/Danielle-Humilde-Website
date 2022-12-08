@@ -9,6 +9,7 @@ import {
     Title,
 } from '../../../components';
 import { useIsMobile } from '../../../hooks';
+import { getImageUrl } from '../../../utils';
 import {
     StyledDigitalMarketing,
     StyledRow,
@@ -129,7 +130,7 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                         <div style={{ textAlign: 'center' }}>
                             <StyledImg
                                 style={isMobile ? {maxWidth: 300} : {}}
-                                src={'/images/digital_marketing_seo.png'}
+                                src={getImageUrl('digital_marketing_seo.png')}
                                 alt={'Digital Marketing SEO Result'}
                             />
                         </div>
@@ -146,7 +147,7 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                         { isMobile ? marketGrowthIntro : <></> }
                         <StyledRow>
                             <StyledImg
-                                src={'/images/digital_marketing_market_growth.png'}
+                                src={getImageUrl('digital_marketing_market_growth.png')}
                                 alt={'Market Growth Opportunities'}
                                 style={isMobile ? {maxHeight: 255} : {}}
                             />
@@ -198,12 +199,12 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                 (
                                     <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
                                         <StyledImg
-                                            src={'/images/digital_marketing_example_1.png'}
+                                            src={getImageUrl('digital_marketing_example_1.png')}
                                             alt={'Digital Marketing Example 1'}
                                             style={isMobile ? {maxHeight: 255} : {}}
                                         />
                                         <StyledImg
-                                            src={'/images/digital_marketing_example_2.png'}
+                                            src={getImageUrl('digital_marketing_example_2.png')}
                                             alt={'Ditigal Marketing Example 2'}
                                             style={isMobile ? {maxHeight: 255} : {}}
                                         />
@@ -213,12 +214,12 @@ const DigitalMarketing: React.FC<IProps> = (props: IProps) => {
                                 (
                                     <>
                                         <StyledImg
-                                            src={'/images/digital_marketing_example_1.png'}
+                                            src={getImageUrl('digital_marketing_example_1.png')}
                                             alt={'Digital Marketing Example 1'}
                                             style={{ marginRight: 12 }}
                                         />
                                         <StyledImg
-                                            src={'/images/digital_marketing_example_2.png'}
+                                            src={getImageUrl('digital_marketing_example_2.png')}
                                             alt={'Ditigal Marketing Example 2'}
                                         />
                                     </>

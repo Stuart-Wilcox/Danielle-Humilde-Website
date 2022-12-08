@@ -16,6 +16,8 @@ import {
     StyledAboutImage,
     StyledAboutIntro,
 } from './index.style';
+import { getImageUrl } from '../../utils';
+
 
 type AboutDetails = {
     title: string;
@@ -116,7 +118,7 @@ const About: React.FC<IProps> = (props: IProps) => {
                         isMobile ? Intro : <></>
                     }
                     <StyledAboutImage
-                        src={'images/about.jpg'}
+                        src={getImageUrl('about.jpg')}
                         alt={'Danielle Humilde'}
                         show={!isMobile}
                     />
@@ -124,7 +126,7 @@ const About: React.FC<IProps> = (props: IProps) => {
                         { isMobile ? <></> : Intro }
                         <StyledAboutImage
                             style={{ maxHeight: 150, marginTop: 15 }}
-                            src={'images/about.jpg'}
+                            src={getImageUrl('about.jpg')}
                             alt={'Danielle Humilde'}
                             show={isMobile}
                         />

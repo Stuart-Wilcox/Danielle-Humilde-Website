@@ -9,6 +9,7 @@ import {
     StyledGrid,
     StyledGridRow,
 } from './index.style';
+import { getImageUrl, getLinkUrl } from '../../utils';
 
 type ProjectData = {
     name: string;
@@ -20,27 +21,27 @@ type ProjectData = {
 const projectGridData: ProjectData[] = [
     {
         name: 'Toronto Tube',
-        location: '/work/toronto-tube',
+        location: getLinkUrl('work/toronto-tube'),
         color: '#DECAF2',
-        image: '/images/toronto_tube_preview.png',
+        image: 'toronto_tube_preview.png',
     },
     {
         name: 'Subtle-T',
-        location: '/work/subtle-t',
+        location: getLinkUrl('work/subtle-t'),
         color: '#F97781',
-        image: '/images/subtle_t_preview.png',
+        image: 'subtle_t_preview.png',
     },
     {
         name: 'Smart Mirror',
-        location: '/work/smart-mirror',
+        location: getLinkUrl('work/smart-mirror'),
         color: '#EFB877',
-        image: '/images/smart_mirror_preview.png',
+        image: 'smart_mirror_preview.png',
     },
     {
         name: 'Digital Marketing',
-        location: '/work/digital-marketing',
+        location: getLinkUrl('work/digital-marketing'),
         color: '#CADFF2',
-        image: '/images/digital_marketing_preview.png',
+        image: 'digital_marketing_preview.png',
     }
 ];
 
@@ -84,7 +85,7 @@ const ProjectGrid: React.FC<IProps> = (props: IProps) => {
                                         name={cardData.name}
                                         location={cardData.location}
                                         color={cardData.color}
-                                        image={cardData.image}
+                                        image={getImageUrl(cardData.image)}
                                         isFirst={index===0}
                                         isLast={index===(cardRow.length-1)}
                                     />

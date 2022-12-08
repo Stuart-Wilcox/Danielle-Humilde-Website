@@ -7,6 +7,8 @@ import {
     StyledFooterGroup,
     StyledFooterIcon,
 } from './index.style';
+import { getImageUrl } from '../../utils';
+
 
 export interface IProps {
     
@@ -27,7 +29,7 @@ const Footer: React.FC<IProps> = (props: IProps) => {
                 <StyledFooterItem>
                     <a href={'mailto:d.humilde@outlook.com'}>
                         <StyledFooterIcon
-                            src={'/images/email.png'}
+                            src={getImageUrl('email.png')}
                             alt={'Email'}
                         />
                     </a>
@@ -35,7 +37,7 @@ const Footer: React.FC<IProps> = (props: IProps) => {
                 <StyledFooterItem>
                     <a href={'https://www.linkedin.com/in/danielle-humilde/'} target={'_blank'}>
                         <StyledFooterIcon
-                            src={'/images/linkedin.png'}
+                            src={getImageUrl('linkedin.png')}
                             alt={'LinkedIn'}
                         />
                     </a>
@@ -43,7 +45,7 @@ const Footer: React.FC<IProps> = (props: IProps) => {
                 <StyledFooterItem>
                     <StyledFooterIcon
                         style={{ cursor: 'pointer' }}
-                        src={'/images/resume.png'}
+                        src={getImageUrl('resume.png')}
                         alt={'Resume'}
                         onClick={() => handleResumeClick()}
                     />

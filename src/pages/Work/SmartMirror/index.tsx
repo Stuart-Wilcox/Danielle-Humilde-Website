@@ -8,6 +8,7 @@ import {
     Section,
 } from '../../../components';
 import { useIsMobile } from '../../../hooks';
+import { getImageUrl } from '../../../utils';
 import {
     StyledSmartMirror,
     StyledRow,
@@ -112,7 +113,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                         <div style={{textAlign:'center'}}>
                             <StyledImg
                                 style={isMobile ? {maxWidth: 300} : {}}
-                                src={'/images/smart_mirror_research.png'}
+                                src={getImageUrl('smart_mirror_research.png')}
                                 alt={'Smart Mirror Research'}
                             />
                         </div>
@@ -131,7 +132,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                         <div style={{textAlign:'center'}}>
                             <StyledImg
                                 style={isMobile ? {maxWidth: 300} : {}}
-                                src={'/images/smart_mirror_user_scenario.png'}
+                                src={getImageUrl('smart_mirror_user_scenario.png')}
                                 alt={'Smart Mirror User Scenario Testing'}
                             />
                         </div>
@@ -185,7 +186,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                         <StyledRow style={{marginBottom: 8}}>
                             <StyledImg
                                 style={{ marginRight: 8 }}
-                                src={'/images/smart_mirror_persona.png'}
+                                src={getImageUrl('smart_mirror_persona.png')}
                                 alt={'Smart Mirror Persona'}
                             />
                             <Paragraph style={{marginTop: 0}}>
@@ -196,7 +197,7 @@ const SmartMirror: React.FC<IProps> = (props: IProps) => {
                         </StyledRow>
                         <StyledImg
                             style={isMobile ? {maxWidth: 300} : {}}
-                            src={'/images/smart_mirror_journey_map.png'}
+                            src={getImageUrl('smart_mirror_journey_map.png')}
                             alt={'Smart Mirror Journey Map'}
                         />
                         <Subtitle>

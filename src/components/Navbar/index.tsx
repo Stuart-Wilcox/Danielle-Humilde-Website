@@ -7,6 +7,7 @@ import {
     StyledNavbarGroup,
     StyledNavbarItem,
 } from './index.style';
+import { getLinkUrl } from '../../utils';
 
 export interface IProps {
     
@@ -36,19 +37,19 @@ const Navbar: React.FC<IProps> = (props: IProps) => {
     return (
         <StyledNavbar>
             <StyledNavbarGroup>
-                <StyledNavbarItem to={'/home'}>
+                <StyledNavbarItem to={getLinkUrl('home')}>
                     Danielle Humilde
                 </StyledNavbarItem>
             </StyledNavbarGroup>
             <div style={{flex:1}}/>
             <StyledNavbarGroup>
-                <StyledNavbarItem to={'/work'}>
+                <StyledNavbarItem to={getLinkUrl('work')}>
                     Work
                 </StyledNavbarItem>
-                <StyledNavbarItem to={'/about'}>
+                <StyledNavbarItem to={getLinkUrl('about')}>
                     About
                 </StyledNavbarItem>
-                <StyledNavbarItem to={'contact'}>
+                <StyledNavbarItem to={getLinkUrl('contact')}>
                     Contact
                 </StyledNavbarItem>
                 <StyledNavbarItem
